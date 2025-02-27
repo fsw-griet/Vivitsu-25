@@ -27,11 +27,13 @@ const EventHighlight = () => {
             className="flex flex-col items-center p-4 rounded-lg shadow-lg border border-gray-200 bg-white transition-transform hover:scale-105 cursor-pointer"
             onClick={() => handleClick(index)}
           >
-            <img
-              src={highlight.img}
-              alt={highlight.title}
-              className="w-24 h-24 mb-3"
-            />
+            {highlight.img && (
+              <img
+                src={highlight.img}
+                alt={highlight.title}
+                className="w-24 h-24 mb-3"
+              />
+            )}
             <p className="text-lg font-medium">{highlight.title}</p>
             {activeIndex === index && (
               <p className="mt-2 text-sm text-gray-700 transition-opacity duration-300">
