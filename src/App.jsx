@@ -1,14 +1,15 @@
 
 import './App.css'
-import EventHighlight from './components/EventHighlight.jsx'
-
+import AboutUs from './pages/AboutUs'
+import Faqs from './components/Faqs'
 function App() {
 
   return (
-    <>
-      <EventHighlight />
-      Vivitsu
-    </>
+    <div className="app">
+      {/* <AboutUs/>
+       */}
+       <Faqs/>
+    </div>
   )
 }
 

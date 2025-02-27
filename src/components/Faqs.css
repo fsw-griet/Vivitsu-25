@@ -1,0 +1,29 @@
+.faq {
+    background-color: #fff;
+    border-radius: 0.2rem;
+    box-shadow: 0 2px 6px 1px rgb(158, 154, 154);
+    padding: 0.5rem;
+    width: 90%;
+    min-height: 4rem;
+    /* Initial minimum width before expansion */
+    min-width: 200px;
+    /* Transition for smooth change of min-width */
+    transition: min-width 2s ease;
+}
+
+.faq.expanded {
+    /* New min-width when expanded */
+    min-width: 90%;
+}
+
+.faqs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+.faq h1 {
+    font-size: 1.2rem;
+    font-weight: 600;
+}
