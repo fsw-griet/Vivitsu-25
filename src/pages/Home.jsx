@@ -1,4 +1,5 @@
 import React from "react";
+import TestimonialSlider from "../components/TestimonialSlider";
 
 const Home = () => {
   return (
@@ -9,7 +10,9 @@ const Home = () => {
       </p>
       <div className="WhoWeAre">
         <div className="mt-6 bg-white shadow-lg rounded-2xl p-8">
-          <h2 className="text-2xl font-semibold text-gray-900 text-center">Our Mission</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 text-center">
+            Our Mission
+          </h2>
           <p className="text-gray-700 mt-4">
             The Free Software Wing (FSW) GRIET is dedicated to promoting free
             and open-source software (FOSS) by empowering students with
@@ -26,7 +29,9 @@ const Home = () => {
           </p>
         </div>
         <div className="mt-6 bg-white shadow-lg rounded-2xl p-8">
-          <h2 className="text-2xl font-semibold text-gray-900 text-center">Our Vision</h2>
+          <h2 className="text-2xl font-semibold text-gray-900 text-center">
+            Our Vision
+          </h2>
           <p className="text-gray-700 mt-4">
             The vision of the Free Software Wing (FSW) GRIET is to create a
             thriving ecosystem where free and open-source software (FOSS) drives
@@ -42,26 +47,33 @@ const Home = () => {
           </p>
         </div>
       </div>
+      <div className="TestimonialSlider">
+        <TestimonialSlider />
+      </div>
+      <div className="OurTeam m-6">
+        <section className="mt-6 bg-white shadow-lg rounded-2xl p-8">
+          <div className="container text-center mx-auto flex flex-col md:flex-row items-center justify-around">
+            <h2 className="text-4xl font-bold mb-6 md:mb-0">OUR TEAM</h2>
+            <div className="bg-white text-black rounded-lg shadow-lg w-full md:w-1/2">
+              <img src="group_pic.jpg" alt="Our Team" className="rounded-lg" />
+            </div>
+          </div>
+        </section>
+      </div>
       <div className="cards flex flex-wrap justify-center text-center mt-20">
-      <div className="m-6 bg-white shadow-lg rounded-2xl p-6 w-100">
-        <h2 className="text-2xl font-semibold text-gray-900">Events</h2>
-        <p className="text-gray-700 mt-4 ">
-          hello world
-        </p>
+        <div className="m-6 bg-white shadow-lg rounded-2xl p-6 w-100">
+          <h2 className="text-2xl font-semibold text-gray-900">Events</h2>
+          <p className="text-gray-700 mt-4 ">hello world</p>
+        </div>
+        <div className="m-6 bg-white shadow-lg rounded-2xl p-6 w-100">
+          <h2 className="text-2xl font-semibold text-gray-900">Events</h2>
+          <p className="text-gray-700 mt-4 ">hello world</p>
+        </div>
+        <div className="m-6 bg-white shadow-lg rounded-2xl p-6 w-100">
+          <h2 className="text-2xl font-semibold text-gray-900">Events</h2>
+          <p className="text-gray-700 mt-4 ">hello world</p>
+        </div>
       </div>
-      <div className="m-6 bg-white shadow-lg rounded-2xl p-6 w-100">
-        <h2 className="text-2xl font-semibold text-gray-900">Events</h2>
-        <p className="text-gray-700 mt-4 ">
-          hello world
-        </p>
-      </div>
-      <div className="m-6 bg-white shadow-lg rounded-2xl p-6 w-100">
-        <h2 className="text-2xl font-semibold text-gray-900">Events</h2>
-        <p className="text-gray-700 mt-4 ">
-          hello world
-        </p>
-      </div>
-    </div>
     </div>
   );
 };
