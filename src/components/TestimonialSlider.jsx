@@ -37,7 +37,7 @@ const TestimonialSlider = () => {
 
   return (
     <div className="relative flex flex-col items-center bg-gradient-to-r from-blue-200 to-blue-400 rounded-2xl m-8 py-15 px-4">
-      <div className="relative w-full max-w-3xl p-10 bg-white bg-opacity-20 backdrop-blur-lg shadow-xl rounded-lg flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105">
+      <div className="relative w-0.8 max-w-3xl p-10 bg-white bg-opacity-20 backdrop-blur-lg shadow-xl rounded-lg flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105">
         <motion.div
           key={currentIndex}
           initial={{ opacity: 0, y: 20 }}
@@ -57,13 +57,13 @@ const TestimonialSlider = () => {
       </div>
       <button
         onClick={prevTestimonial}
-        className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-white shadow-md w-12 h-12 flex items-center justify-center rounded-full text-blue-600 text-xl hover:bg-gray-200 transition-all"
+        className="absolute left-6 top-1/2 transform -translate-y-1/2 bg-transparent w-12 h-12 flex items-center justify-center rounded-full text-blue-600 text-xl hover:bg-gray-200 transition-all"
       >
         <FaChevronLeft />
       </button>
       <button
         onClick={nextTestimonial}
-        className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-white shadow-md w-12 h-12 flex items-center justify-center rounded-full text-blue-600 text-xl hover:bg-gray-200 transition-all"
+        className="absolute right-6 top-1/2 transform -translate-y-1/2 bg-transparent w-12 h-12 flex items-center justify-center rounded-full text-blue-600 text-xl hover:bg-gray-200 transition-all"
       >
         <FaChevronRight />
       </button>
