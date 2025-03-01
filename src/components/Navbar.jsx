@@ -8,8 +8,8 @@ const Navbar = () => {
     <nav className="flex justify-between items-center px-8 py-4 bg-white shadow-md">
       {/* Left Section: Logos */}
       <div className="flex items-center space-x-4">
-        <img src="/logo1.png" alt="Logo 1" className="h-12" />
-        <img src="/logo2.png" alt="Logo 2" className="h-12" />
+        <img src="griet_logo.png" alt="Logo 1" className="h-12" />
+        <img src="fsw_logo.png" alt="Logo 2" className="h-12" />
       </div>
 
       {/* Mobile Menu Button */}
