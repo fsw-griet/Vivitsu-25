@@ -8,7 +8,7 @@ const Home = () => {
         Empowering Technology Professionals Since 2004
       </p>
       <div className="WhoWeAre">
-        <div className="mt-6 bg-white shadow-lg rounded-2xl p-6">
+        <div className="mt-6 bg-white shadow-lg rounded-2xl p-8">
           <h2 className="text-2xl font-semibold text-gray-900 text-center">Our Mission</h2>
           <p className="text-gray-700 mt-4">
             The Free Software Wing (FSW) GRIET is dedicated to promoting free
@@ -25,7 +25,7 @@ const Home = () => {
             future.
           </p>
         </div>
-        <div className="mt-6 bg-white shadow-lg rounded-2xl p-6">
+        <div className="mt-6 bg-white shadow-lg rounded-2xl p-8">
           <h2 className="text-2xl font-semibold text-gray-900 text-center">Our Vision</h2>
           <p className="text-gray-700 mt-4">
             The vision of the Free Software Wing (FSW) GRIET is to create a

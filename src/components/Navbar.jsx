@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
@@ -22,22 +23,22 @@ const Navbar = () => {
         className={`md:flex md:space-x-8 text-gray-700 text-lg absolute md:static top-16 left-0 w-full md:w-auto bg-white md:bg-transparent shadow-md md:shadow-none transition-transform duration-300 ease-in-out transform ${isOpen ? "block" : "hidden"} md:flex`}
       >
         <li className="hover:text-blue-600 hover:font-bold hover:text-xl transition-all duration-300 p-4 md:p-0">
-          <a href="#">Home</a>
+          <Link to="/">Home</Link>
         </li>
         <li className="hover:text-blue-600 hover:font-bold hover:text-xl transition-all duration-300 p-4 md:p-0">
-          <a href="#">About Us</a>
+          <Link to="/about">About Us</Link>
         </li>
         <li className="hover:text-blue-600 hover:font-bold hover:text-xl transition-all duration-300 p-4 md:p-0">
-          <a href="#">Events</a>
+          <Link to="/events">Events</Link>
         </li>
         <li className="hover:text-blue-600 hover:font-bold hover:text-xl transition-all duration-300 p-4 md:p-0">
-          <a href="#">Team</a>
+          <Link to="/team">Team</Link>
         </li>
         <li className="hover:text-blue-600 hover:font-bold hover:text-xl transition-all duration-300 p-4 md:p-0">
-          <a href="#">Magazines</a>
+          <Link to="/magazines">Magazines</Link>
         </li>
         <li className="hover:text-blue-600 hover:font-bold hover:text-xl transition-all duration-300 p-4 md:p-0">
-          <a href="#">Join Us</a>
+          <Link to="/join-us">Join Us</Link>
         </li>
       </ul>
     </nav>
