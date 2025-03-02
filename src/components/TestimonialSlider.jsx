@@ -36,7 +36,7 @@ const TestimonialSlider = () => {
   }, []);
 
   return (
-    <div className="relative flex flex-col items-center bg-gradient-to-r from-blue-200 to-blue-400 rounded-2xl m-8 py-15 px-4">
+    <div className="relative flex flex-col items-center w-full bg-gradient-to-r from-blue-200 to-blue-400 rounded-2xl p-8 px-12 mt-8">
       <div className="relative w-0.8 max-w-3xl p-10 bg-white bg-opacity-20 backdrop-blur-lg shadow-xl rounded-lg flex flex-col items-center text-center transform transition-all duration-500 hover:scale-105">
         <motion.div
           key={currentIndex}
