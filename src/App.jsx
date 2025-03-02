@@ -7,7 +7,7 @@ import Faqs from './components/Faqs.jsx';
 import EventHighlight from './components/EventHighlight.jsx';
 import Home from './pages/Home.jsx';
 import Footer from './components/Footer.jsx';
-
+import VivitsuMain from './pages/VivitsuMain.jsx';
 function App() {
   return (
     <>
@@ -17,7 +17,9 @@ function App() {
         <Route path="/about" element={<AboutUs />} />
         <Route path="/faqs" element={<Faqs />} />
         <Route path="/events" element={<EventHighlight />} />
+        <Route path='/vivitsu' element={<VivitsuMain />} />
       </Routes>
+        
       <Footer />
     </>
   )
