@@ -11,7 +11,8 @@ const achievements = [
 ];
 const AboutUs = () => {
   return (
-    <div className="about-us mt-25">
+    <div className="bg-gray-100">
+    <div className="about-us ">
       <div className="about-us-vivitsu m-10 rounded-4xl bg-blue-300 p-10">
         <img src="images/logo.png" alt="" className="vivitsu-logo" />
         <h1 className="text-3xl text-center">VIVITSU</h1>
@@ -101,6 +102,7 @@ const AboutUs = () => {
           </div>
         ))}
       </div>
+    </div>
     </div>
     </div>
   );

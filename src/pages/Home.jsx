@@ -3,7 +3,7 @@ import TestimonialSlider from "../components/TestimonialSlider";
 
 const Home = () => {
   return (
-    <div className="flex flex-col items-center py-10 px-5 bg-gray-100">
+    <div className="flex flex-col items-center py-10 px-5 mt-20 bg-gray-100">
       <h1 className="text-3xl font-bold text-gray-900">FSW GRIET</h1>
       <p className="text-gray-600 mt-2">
         Empowering Technology Professionals Since 2004
