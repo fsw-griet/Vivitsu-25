@@ -1,21 +1,52 @@
 import React from "react";
 import TestimonialSlider from "../components/TestimonialSlider";
 import { motion } from "framer-motion";
+import Iridescence from "../components/Iridescence.jsx";
+import MetaBalls from "../components/MeatalBalls.jsx";
+import Threads from "../components/Threads.jsx";
 
 const Home = () => {
   return (
     <>
-      <div className="flex flex-col items-center mt-20 py-10 px-5 w-full bg-gradient-to-b from-blue-500 to-white">
-        <div className="flex flex-col items-center w-full h-screen/2">
-          <div className="flex flex-col items-center py-10 px-5 mt-20 w-full">
-            <div className="text-center mb-10 w-full">
-              <h1 className="text-4xl font-bold text-gray-900 mb-2">
-                FSW GRIET
-              </h1>
-              <div className="w-20 h-1 bg-[#2196f3] rounded-2xl mx-auto mt-2 transition-all duration-300 hover:w-32"></div>
-            </div>
-          </div>
+      <div className="relative w-full h-screen mt-20">
+        {/* Iridescence Background */}
+        <Iridescence className="absolute top-0 left-0 w-full h-full" />
+
+        {/* Text Section (Left Side) */}
+        <div className="absolute top-1/2 left-10 transform -translate-y-1/2 text-black">
+          <h1 className="text-4xl font-bold">Free Software Wing!</h1>
+          <p className="text-lg mt-2">
+            Promoting open-source innovation, collaboration, and software
+            freedom. (can add some gradient)
+          </p>
         </div>
+
+        {/* Logo (Right Side, Hidden on Mobile) */}
+        <img
+          src="fsw_logo.png" // Replace with actual logo path
+          alt="Logo"
+          className="absolute top-1/2 right-10 transform -translate-y-1/2 w-100 rounded-2xl md:block hidden"
+        />
+      </div>
+      <div className="h-100">
+        <MetaBalls
+          color="#5c3abb"
+          cursorBallColor="#5c3abb"
+          cursorBallSize={2}
+          ballCount={20}
+          animationSize={30}
+          enableMouseInteraction={true}
+          enableTransparency={true}
+          hoverSmoothness={0.05}
+          clumpFactor={1}
+          speed={0.3}
+        />
+      </div>
+      <div style={{ width: "100%", height: "600px", position: "relative" }}>
+        <Threads amplitude={1} distance={0} enableMouseInteraction={true} />
+      </div>
+
+      <div className="flex flex-col items-center py-10 px-5 w-full bg-gradient-to-b from-blue-300 to-white">
         <div className="text-center mb-10">
           <h2 className="text-3xl font-bold text-gray-900">WHO WE ARE?</h2>
           <div className="w-16 h-1 bg-red-600 mx-auto rounded-2xl mt-2 transition-all duration-300 hover:w-32"></div>
