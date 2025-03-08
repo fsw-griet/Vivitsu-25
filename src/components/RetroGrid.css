@@ -1,0 +1,30 @@
+.retro-grid {
+    position: absolute;
+    inset: 0;
+    overflow: hidden;
+    perspective: 800px;
+  }
+  
+  .retro-grid-lines {
+    position: absolute;
+    inset: 0;
+    width: 500vw;
+    height: 500vh;
+    background-image: 
+      linear-gradient(to right, rgba(100, 100, 100, 0.3) 1px, transparent 1px),
+      linear-gradient(to bottom, rgba(100, 100, 100, 0.3) 1px, transparent 1px);
+    background-size: 80px 80px; /* Larger grid cells */
+    transform-origin: center top;
+    transform: rotateX(80deg) translateY(50px);
+    animation: moveGrid 5s linear infinite;
+  }
+  
+  @keyframes moveGrid {
+    from {
+      transform: rotateX(80deg) translateY(50px) translateZ(0);
+    }
+    to {
+      transform: rotateX(80deg) translateY(50px) translateZ(200px);
+    }
+  }
+  
