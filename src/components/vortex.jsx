@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 import { cn } from "../lib/utils"; 
 import PropTypes from 'prop-types';
 
-export const Vortex = (props) => {
+const Vortex = (props) => {
   const canvasRef = useRef(null);
   const containerRef = useRef(null);
   const particleCount = props.particleCount || 700;
@@ -247,3 +247,5 @@ Vortex.propTypes = {
     className: PropTypes.string,
     children: PropTypes.node,
   };
+
+  export default Vortex;  

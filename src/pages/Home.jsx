@@ -3,6 +3,8 @@ import { LampContainer } from "../components/Lamplight";
 import { EvervaultCard } from "../components/evalcard";
 import { Boxes } from "../components/Retro";
 import './App.css';
+import Laptop from "../components/LaptopDomains";
+// import LaptopDo from "../components/laptop2";
 const Home = () => {
   const typewriterStyle = {
     overflow: "hidden",
@@ -84,6 +86,7 @@ const Home = () => {
         </div>
       </LampContainer>
 
+      <Laptop/> 
 {/* Our Team Section */}
       <div className="bg-gradient-to-b from-black to-gray-900 py-20 text-white w-full overflow-hidden">
         <div className="container mx-auto flex flex-col md:flex-row items-center max-w-6xl px-6">
@@ -109,32 +112,92 @@ const Home = () => {
 <br></br>
 {/* Circle section */}
       
-      <div className="relative w-full flex justify-center items-center overflow-hidden pb-30">
-      <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[90%] h-[60vh] bg-gradient-to-b from-blue-300 to-blue-700 rounded-full flex justify-center items-center"></div>
-      
-      <div className="relative z-10 flex flex-col items-center text-center w-[80%] max-w-6xl px-6 pt-25">
-        <div className="flex flex-col md:flex-row justify-center items-center gap-8">
-          <div className="w-90 h-90 bg-white rounded-full flex justify-center items-center shadow-lg text-lg font-bold text-blue-700">
-            Past Events
-          </div>
-          <div className="w-90 h-90 bg-white rounded-full flex justify-center items-center shadow-lg text-lg font-bold text-blue-700">
-            Core Committee
-          </div>
-          <div className="w-90 h-90 bg-white rounded-full flex justify-center items-center shadow-lg text-lg font-bold text-blue-700">
-            Vivitsu
-          </div>
+<div
+  style={{
+    position: 'relative',
+    width: '100%',
+    display: 'flex',
+    justifyContent: 'center',
+    alignItems: 'center',
+    overflow: 'hidden',
+    padding: '30px 0',
+  }}
+>
+  <div
+    style={{
+      position: 'relative',
+      zIndex: 10,
+      display: 'flex',
+      flexDirection: 'column',
+      alignItems: 'center',
+      textAlign: 'center',
+      width: '80%',
+      maxWidth: '1600px',
+      padding: '10px',
+    }}
+  >
+    <div
+      style={{
+        display: 'flex',
+        justifyContent: 'space-around',
+        alignItems: 'center',
+        gap: '100px',
+      }}
+    >
+      {['Past Events', 'Core Committee', 'Vivitsu'].map((text, index) => (
+        <div key={index} className="circle-container" style={{ position: 'relative', width: '22.5rem', height: '22.5rem', display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+          <div className="glowing-border"></div>
+          <div className="circle-inner">{text}</div>
         </div>
-      </div>
+      ))}
     </div>
-          
+  </div>
+
+  <style>{`
+    .glowing-border {
+      position: absolute;
+      width: calc(100% + 20px);
+      height: calc(100% + 20px);
+      border-radius: 50%;
+      background: transparent;
+      box-shadow: 0 0 30px rgba(0, 255, 255, 0.8), 0 0 50px rgba(0, 255, 255, 0.6);
+      animation: electric-waves 2s infinite linear;
+      filter: blur(6px);
+    }
+    
+    .circle-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      background: radial-gradient(circle, rgba(0, 255, 255, 0.4) 20%, rgba(0, 0, 255, 0.1) 80%);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 1.5rem;
+      font-weight: bold;
+      color:rgb(245, 245, 245);
+    }
+
+    @keyframes electric-waves {
+      0%, 100% {
+        box-shadow: 0 0 30px rgba(0, 255, 255, 0.8), 0 0 50px rgba(0, 255, 255, 0.6);
+      }
+      50% {
+        box-shadow: 0 0 40px rgba(0, 255, 255, 1), 0 0 60px rgba(0, 255, 255, 0.9);
+      }
+    }
+  `}</style>
+</div>
+
 
           
       {/* Join Community Section */}
       <EvervaultCard className="bg-white/10 p-2 rounded-2xl shadow-lg text-center max-w-3xl mx-auto mt-16 mb-10">
         <div className="flex flex-col items-center space-y-4 p-10">
-          <h2 className="text-3xl font-bold text-blue-400">FSW COMMUNITY</h2>
+          <h2 className="text-3xl font-bold text-white">FSW OSC COMMUNITY</h2>
           <p className="text-gray-300 text-center">
-            Join our growing community of tech enthusiasts and developers.
+            Join our growing community of tech enthusiasts and developers. Create projects using open source tools and contribute to real time open source projects.
           </p>
           <button className="bg-blue-500 text-white font-semibold px-6 py-3 rounded-full shadow-md hover:bg-blue-600 transition hover:scale-105 active:scale-95">
             JOIN US NOW

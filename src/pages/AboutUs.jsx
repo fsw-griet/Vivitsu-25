@@ -1,7 +1,6 @@
 import { FaTrophy, FaMedal, FaStar, FaAward } from "react-icons/fa";
 import "./AboutUs.css";
 
-
 const achievements = [
   { year: "2010", title: "Best Student Chapter Award", icon: <FaTrophy /> },
   { year: "2020", title: "Best Accredited Student Branch Award", icon: <FaAward /> },

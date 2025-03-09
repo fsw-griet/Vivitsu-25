@@ -1,10 +1,11 @@
 .title{  
-    background-image: url('https://i.gifer.com/J4o.gif');
+    /* background-image: url('https://i.gifer.com/J4o.gif');
     background-repeat: no-repeat;
   background-size: cover; 
-  background-position: center;
+  background-position: center; */
   height: 95vh;  
-
+  overflow: hidden;
+  position: relative;
 }
 .title1{
     display: flex;

@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import  { useState } from "react";
 
 const highlights = [
   { title: "24 Hour Hackathon", img: "/images/hackathon.png", text: "Details about the hackathon..." },

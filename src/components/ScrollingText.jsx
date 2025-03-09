@@ -6,7 +6,7 @@ export default function InfiniteScrollText() {
   return (
     <div className="w-full overflow-hidden py-4">
       <motion.div
-        className="flex whitespace-nowrap items-center text-2xl"
+        className="flex whitespace-nowrap items-center text-8xl"
         initial={{ x: "0%" }}
         animate={{ x: "-100%" }}
         transition={{
@@ -23,7 +23,7 @@ export default function InfiniteScrollText() {
               fontFamily: "'Lucida Sans', 'Arial', sans-serif", // Set Lucida Sans font
               background: `linear-gradient(45deg, #1e3c72, #2a5298, #6a82fb, #fc5c7d)`, // Gradient for text
               backgroundSize: "400% 400%", // Larger gradient size for animation
-              animation: "gradientShift 10s ease infinite", // Animate the gradient
+              animation: "gradientShift 5s ease infinite", // Animate the gradient
               WebkitBackgroundClip: "text", // Ensure the background is clipped to the text
               color: "transparent", // Make the text color transparent so gradient shows
             }}
