@@ -5,6 +5,7 @@ import { Boxes } from "../components/Retro";
 import './App.css';
 import Laptop from "../components/LaptopDomains";
 // import LaptopDo from "../components/laptop2";
+//import GlassBreakScene from "../components/GlassBreakScene";
 const Home = () => {
   const typewriterStyle = {
     overflow: "hidden",
@@ -120,7 +121,7 @@ const Home = () => {
     justifyContent: 'center',
     alignItems: 'center',
     overflow: 'hidden',
-    padding: '30px 0',
+    padding: '30px 30px',
   }}
 >
   <div
@@ -133,7 +134,7 @@ const Home = () => {
       textAlign: 'center',
       width: '80%',
       maxWidth: '1600px',
-      padding: '10px',
+      padding: '30px',
     }}
   >
     <div
@@ -141,7 +142,7 @@ const Home = () => {
         display: 'flex',
         justifyContent: 'space-around',
         alignItems: 'center',
-        gap: '100px',
+        gap: '120px',
       }}
     >
       {['Past Events', 'Core Committee', 'Vivitsu'].map((text, index) => (
@@ -204,6 +205,7 @@ const Home = () => {
           </button>
         </div>
       </EvervaultCard>
+
     </>
   );
 };

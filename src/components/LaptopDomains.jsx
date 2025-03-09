@@ -1,13 +1,15 @@
 import { useEffect, useState } from "react";
+import PropTypes from "prop-types";
+import "./styles.css";
 
-function Laptop() {
+function Laptop({ neonTextClass, neonGlowClass }) {
   const [scrollProgress, setScrollProgress] = useState(0);
 
   useEffect(() => {
     const handleScroll = () => {
       const scrollHeight =
         document.documentElement.scrollHeight - window.innerHeight;
-      const progress = (window.scrollY / scrollHeight) * 100;
+      const progress = (window.scrollY / scrollHeight) * 120;
       setScrollProgress(progress);
     };
 
@@ -15,29 +17,33 @@ function Laptop() {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
-  const clampedProgress = Math.min(scrollProgress, 70);
-  const laptopAngle = Math.max(0, 200 * (1 - clampedProgress / 70)); // Adjusted angle for full opening
+  //const clampedProgress = Math.min(scrollProgress, 70);
+  const laptopAngle = Math.max(0, 200 - (200 * Math.min(scrollProgress, 70)) / 70);
 
   return (
-    <div className="min-h-[300vh]">
+    <div className="min-h-[150vh] relative bg-transparent flex flex-col items-center justify-center">
+      {/* Neon Text Background */}
+      <div className="absolute top-1/3 left-0 w-full flex justify-center">
+        <h1 className={`text-9xl font-bold uppercase tracking-widest ${neonTextClass}`}>
+          OUR TEAM
+        </h1>
+      </div>
+
       <div className="min-h-screen sticky top-0 flex items-center justify-center overflow-hidden">
         {/* Laptop Container */}
         <div
-          className="relative w-[1000px] h-[600px] transform-gpu"
-          style={{
-            perspective: "1500px",
-          }}
+          className={`relative w-[1000px] h-[600px] transform-gpu ${neonGlowClass}`}
+          style={{ perspective: "1500px" }}
         >
           {/* Laptop Screen */}
           <div
             className="absolute w-full h-[600px] bg-gray-800 rounded-t-xl border-4 border-gray-700 transform-gpu origin-bottom"
             style={{
               transform: `rotateX(${-laptopAngle}deg)`,
-              transition: "transform 0.1s ease-out", // Slightly increased transition time
+              transition: "transform 0.1s ease-out",
               backfaceVisibility: "hidden",
             }}
           >
-            {/* Screen Content */}
             <div className="absolute inset-2 bg-black rounded overflow-hidden">
               <div className="animate-fade-up">
                 <div className="bg-gradient-to-b from-black to-gray-900 py-20 text-white w-full overflow-hidden">
@@ -50,7 +56,6 @@ function Laptop() {
                         excellence.
                       </p>
                     </div>
-
                     <div className="md:w-1/2 mt-8 md:mt-0 flex justify-center hover:scale-105 transition-transform duration-300">
                       <img
                         src="group_pic.jpg"
@@ -82,4 +87,14 @@ function Laptop() {
   );
 }
 
-export default Laptop;
+Laptop.propTypes = {
+  neonTextClass: PropTypes.string,
+  neonGlowClass: PropTypes.string,
+};
+
+Laptop.defaultProps = {
+  neonTextClass: "neon-text",
+  neonGlowClass: "neon-glow",
+};
+
+export default Laptop;  
