@@ -9,14 +9,15 @@ import Timeline from "../components/timeline";
 //import Laptop from "../components/LaptopDomains";
 //import BowlingEffect from "../components/smaash";
 import PortalEffectSlider from "../components/portaleffectslider";
+import VivitsuDetails from "../components/vivitsu/VivitsuDetails";
 
 export default function VivitsuMain(){
     return(
         <div>
         <Vivitsu/>
-        <AboutPage/>
+        <VivitsuDetails />
         <Highlights/>
-        <ScrollingText/>
+        {/* <ScrollingText/> */}
         {/* <Domains/> */}
         <div className="container mx-auto px-4 py-20 relative z-10">
         <h2 className="text-6xl font-extrabold text-center mb-12 text-white drop-shadow-[0_0_20px_#00BFFF]">
