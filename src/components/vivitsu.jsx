@@ -147,8 +147,14 @@ export default function Vivitsu() {
     left: "50%",
     transform: "translate(-50%, -50%)",
     zIndex: 3,
+    marginTop: "100px",
   }}
 >
+  <br/>
+  <br/>
+  
+
+  
   <MorphingTextDemo />
 
 
@@ -178,6 +184,7 @@ export default function Vivitsu() {
             cursor: "pointer",
             transition: "0.3s",
             textShadow: "0 0 5px #00FFFF",
+            marginTop: "100px",
           }}
           onClick={() => window.open("https://unstop.com/hackathons/vivitsu-2025-national-level-24-hour-hackathon-gokaraju-rangaraju-institute-of-engineering-and-technology-grie-1419715", "_blank")}
         >

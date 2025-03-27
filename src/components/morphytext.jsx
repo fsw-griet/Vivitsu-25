@@ -96,8 +96,8 @@ const Texts = ({ texts }) => {
   const { text1Ref, text2Ref } = useMorphingText(texts);
   return (
     <>
-      <span className="absolute inset-x-0 top-0 m-auto inline-block w-full text-white" ref={text1Ref} />
-      <span className="absolute inset-x-0 top-0 m-auto inline-block w-full text-white" ref={text2Ref} />
+      <span className="absolute inset-0 flex items-center justify-center text-white" ref={text1Ref} />
+      <span className="absolute inset-0 flex items-center justify-center text-white" ref={text2Ref} />
     </>
   );
 };
@@ -125,7 +125,7 @@ const SvgFilters = () => (
 
 const MorphingText = ({ texts, className }) => (
   <div
-    className={`relative mx-auto h-16 w-full max-w-screen-md text-center font-sans text-[40pt] font-bold leading-none text-white [filter:url(#threshold)] [blur:0.6px] md:h-24 lg:text-[6rem] ${className}`}
+    className={`relative mx-auto flex h-12 w-full max-w-screen-sm items-center justify-center text-center font-sans text-[20pt] font-bold leading-none text-white [filter:url(#threshold)] [blur:0.6px] md:h-16 lg:text-[3rem] ${className}`}
   >
     <Texts texts={texts} />
     <SvgFilters />

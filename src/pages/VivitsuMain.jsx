@@ -19,7 +19,10 @@ export default function VivitsuMain(){
         <ScrollingText/>
         {/* <Domains/> */}
         <div className="container mx-auto px-4 py-20 relative z-10">
-        <h2 className="text-4xl font-bold text-center mb-12 text-white">Domains</h2>
+        <h2 className="text-6xl font-extrabold text-center mb-12 text-white drop-shadow-[0_0_20px_#00BFFF]">
+  Domains
+</h2>
+
          <DomainsCarousel />
          <Timeline />
         {/* <Laptop/> */}

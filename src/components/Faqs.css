@@ -5,14 +5,11 @@
     padding: 0.5rem;
     width: 90%;
     min-height: 4rem;
-    /* Initial minimum width before expansion */
     min-width: 200px;
-    /* Transition for smooth change of min-width */
     transition: min-width 2s ease;
 }
 
 .faq.expanded {
-    /* New min-width when expanded */
     min-width: 90%;
 }
 
@@ -26,4 +23,13 @@
 .faq h1 {
     font-size: 1.2rem;
     font-weight: 600;
+    color: black; /* Changed to black for better visibility */
+}
+
+.faqs-heading {
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: black; /* Ensure heading is clearly visible */
 }

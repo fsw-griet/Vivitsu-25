@@ -1,14 +1,11 @@
 import MorphingText from "./morphytext";
  
 const texts = [
-  "nada",
+  "Technology",
   "Innovation",
-  "project",
-  "talent",
-  "subham",
-  "alien",
-  "shamless",
-  
+  "Ideas",
+  "24 Hour Hackathon",
+  "Free Software Wing",
 ];
  
 export function MorphingTextDemo() {

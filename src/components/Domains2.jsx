@@ -67,7 +67,7 @@ const DomainsCarousel = () => {
   };
 
   return (
-    <div className="relative h-[400px] flex items-center justify-center overflow-hidden">
+    <div className="relative h-[600px] flex items-center justify-center overflow-hidden">
       <div className="absolute inset-0 flex items-center justify-center">
         {domains.map((domain, index) => {
           const position = getPosition(index);
@@ -77,19 +77,19 @@ const DomainsCarousel = () => {
           return (
             <div
               key={domain.id}
-              className={`absolute w-full max-w-lg transition-all duration-500 ease-in-out ${
+              className={`absolute w-full max-w-3xl transition-all duration-500 ease-in-out ${
                 position === "center"
                   ? "opacity-100 transform translate-x-0 scale-100 z-20"
                   : position === "right"
-                  ? "opacity-50 transform translate-x-[50%] scale-90 z-10"
+                  ? "opacity-50 transform translate-x-[60%] scale-95 z-10"
                   : position === "left"
-                  ? "opacity-50 transform -translate-x-[50%] scale-90 z-10"
+                  ? "opacity-50 transform -translate-x-[60%] scale-95 z-10"
                   : "opacity-0 transform scale-75 z-0"
               }`}
               onClick={() => isCenter && setFlippedIndex(isFlipped ? null : index)}
             >
               <div
-                className={`relative w-full h-[300px] rounded-xl border border-blue-800/30 transition-transform duration-500 transform ${
+                className={`relative w-full h-[400px] rounded-2xl border border-blue-800/30 transition-transform duration-500 transform ${
                   isFlipped ? "rotate-y-180" : ""
                 }`}
                 style={{
@@ -98,7 +98,7 @@ const DomainsCarousel = () => {
               >
                 {/* Front Side */}
                 <div
-                  className="absolute inset-0 flex flex-col items-center justify-center bg-blue-950/30 backdrop-blur-lg p-8 rounded-xl text-center"
+                  className="absolute inset-0 flex flex-col items-center justify-center bg-blue-950/30 backdrop-blur-lg p-10 rounded-2xl text-center"
                   style={{
                     backfaceVisibility: "hidden",
                   }}
@@ -106,22 +106,22 @@ const DomainsCarousel = () => {
                   <img
                     src={domain.gif}
                     alt={domain.title}
-                    className="w-32 h-32 mx-auto mb-4"
+                    className="w-40 h-40 mx-auto mb-6"
                   />
-                  <h3 className="text-2xl font-bold mb-4 text-white drop-shadow-[0_0_10px_#00FFFF]">
+                  <h3 className="text-3xl font-bold mb-4 text-white drop-shadow-[0_0_15px_#00FFFF]">
                     {domain.title}
                   </h3>
-                  <p className="text-gray-300">{domain.description}</p>
+                  <p className="text-lg text-gray-300">{domain.description}</p>
                 </div>
 
                 {/* Back Side */}
                 <div
-                  className="absolute inset-0 flex flex-col items-center justify-center bg-blue-900 text-white rounded-xl p-4 text-lg font-bold rotate-y-180"
+                  className="absolute inset-0 flex flex-col items-center justify-center bg-blue-900 text-white rounded-2xl p-6 text-xl font-bold rotate-y-180"
                   style={{
                     backfaceVisibility: "hidden",
                   }}
                 >
-                  <p className="text-xl">{domain.backText}</p>
+                  <p className="text-2xl">{domain.backText}</p>
                 </div>
               </div>
             </div>
@@ -132,18 +132,19 @@ const DomainsCarousel = () => {
       {/* Navigation Buttons */}
       <button
         onClick={prevDomain}
-        className="absolute left-4 top-1/2 -translate-y-1/2 z-30 bg-cyan-500/30 hover:bg-cyan-500/60 p-3 rounded-full transition-all drop-shadow-[0_0_10px_#00FFFF]"
+        className="absolute left-8 top-1/2 -translate-y-1/2 z-30 bg-cyan-500/40 hover:bg-cyan-500/70 p-4 rounded-full transition-all drop-shadow-[0_0_15px_#00FFFF]"
       >
-        <ChevronLeft className="w-8 h-8 text-white" />
+        <ChevronLeft className="w-10 h-10 text-white" />
       </button>
       <button
         onClick={nextDomain}
-        className="absolute right-4 top-1/2 -translate-y-1/2 z-30 bg-cyan-500/30 hover:bg-cyan-500/60 p-3 rounded-full transition-all drop-shadow-[0_0_10px_#00FFFF]"
+        className="absolute right-8 top-1/2 -translate-y-1/2 z-30 bg-cyan-500/40 hover:bg-cyan-500/70 p-4 rounded-full transition-all drop-shadow-[0_0_15px_#00FFFF]"
       >
-        <ChevronRight className="w-8 h-8 text-white" />
+        <ChevronRight className="w-10 h-10 text-white" />
       </button>
     </div>
   );
 };
 
 export default DomainsCarousel;
+

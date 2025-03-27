@@ -1,4 +1,4 @@
-import  { useState } from "react";
+import { useState } from "react";
 import { Link } from "react-router-dom";
 import { FaBars, FaTimes } from "react-icons/fa";
 
@@ -6,7 +6,7 @@ const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 shadow-md backdrop-blur-md bg-black md:bg-black/70">
+    <nav className="fixed top-0 left-0 w-full z-50 shadow-md">
       <div className="flex justify-between items-center px-8 py-4">
         {/* Left Section: Logos */}
         <div className="flex items-center space-x-4">
@@ -21,9 +21,9 @@ const Navbar = () => {
 
         {/* Right Section: Navigation Links */}
         <ul
-          className={`md:flex md:space-x-8 text-white text-lg fixed md:static top-0 left-0 w-full md:w-auto h-screen md:h-auto bg-black md:bg-transparent shadow-md md:shadow-none transition-transform duration-300 ease-in-out ${
+          className={`md:flex md:space-x-8 text-white text-lg fixed md:static top-0 left-0 w-full md:w-auto h-screen md:h-auto bg-transparent shadow-md md:shadow-none transition-transform duration-300 ease-in-out ${
             isOpen
-              ? "translate-y-0 flex flex-col items-center justify-center"
+              ? "translate-y-0 flex flex-col items-center justify-center bg-black/80" // Dark background in mobile mode
               : "-translate-y-full"
           } md:translate-y-0`}
         >
@@ -37,12 +37,18 @@ const Navbar = () => {
             </div>
           )}
 
-          {[{ name: "Home", path: "/" }, { name: "About Us", path: "/about" }, { name: "Events", path: "/events" }, { name: "Team", path: "/team" }, { name: "Magazines", path: "/magazines" }, { name: "Join Us", path: "/join-us" }].map((item, index) => (
+          {[
+            { name: "Home", path: "/" },
+            { name: "About Us", path: "/about" },
+            { name: "Events", path: "/events" },
+            { name: "Vivitsu", path: "/vivitsu" },
+            { name: "Team", path: "/team" },
+          ].map((item, index) => (
             <li key={index} className="w-full md:w-auto">
               <Link
                 to={item.path}
                 onClick={() => setIsOpen(false)}
-                className="block w-full p-4 md:p-0 text-center hover:bg-gray-700 md:hover:bg-transparent hover:text-blue-600 hover:font-bold hover:text-xl transition-all duration-300"
+                className="block w-full p-4 md:p-0 text-center hover:text-blue-600 hover:font-bold hover:text-xl transition-all duration-300"
               >
                 {item.name}
               </Link>

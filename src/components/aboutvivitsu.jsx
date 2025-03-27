@@ -1,9 +1,10 @@
-import { useEffect, useRef } from "react";
+import  { useEffect, useRef, useState } from "react";
 import { gsap } from "gsap";
-import NeonGradientCard from "./neongradientcard"; // Importing your existing NeonGradientCard component
+import NeonGradientCard from "./neongradientcard";
 
 const AboutPage = () => {
   const logoRef = useRef(null);
+  const [hover, setHover] = useState(false);
 
   useEffect(() => {
     gsap.to(logoRef.current, {
@@ -13,6 +14,30 @@ const AboutPage = () => {
       ease: "linear",
     });
   }, []);
+
+  const textContainer = {
+    position: "relative",
+    display: "inline-block",
+    fontSize: "3em", // Increased font size
+    fontFamily: "Arial",
+    letterSpacing: "3px",
+    textTransform: "uppercase",
+    WebkitTextStroke: "1px rgba(255,255,255,0.6)",
+    color: "transparent",
+    cursor: "pointer",
+  };
+
+  const hoverText = {
+    position: "absolute",
+    top: 0,
+    left: 0,
+    color: "#00008B", // Changed color to dark blue
+    width: hover ? "100%" : "0%",
+    overflow: "hidden",
+    transition: "width 0.5s ease-in-out",
+    WebkitTextStroke: "1pxrgb(102, 102, 244)", // Changed stroke color to dark blue
+    whiteSpace: "nowrap",
+  };
 
   return (
     <div
@@ -30,6 +55,15 @@ const AboutPage = () => {
         padding: "20px",
       }}
     >
+      <div
+        style={textContainer}
+        onMouseEnter={() => setHover(true)}
+        onMouseLeave={() => setHover(false)}
+      >
+        <span>&nbsp;ABOUT VIVITSU&nbsp;</span>
+        <span style={hoverText}>&nbsp;ABOUT VIVITSU&nbsp;</span>
+      </div>
+
       {/* Rotating Lightbulb Logo */}
       <div
         style={{
@@ -64,8 +98,8 @@ const AboutPage = () => {
         }}
       >
         <p style={{ fontSize: "1.2rem", opacity: 0.9 }}>
-          Welcome to our platform! We believe in innovation and creativity.
-          Our goal is to build immersive experiences with cutting-edge technology.
+          Welcome to VIVITSU 2025! We believe in innovation and creativity.
+          Our goal is build innovative projects within 24 hours.
         </p>
       </div>
 
@@ -73,19 +107,19 @@ const AboutPage = () => {
       <div
         style={{
           display: "grid",
-          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-          gap: "20px",
-          marginTop: "30px",
+          gridTemplateColumns: "repeat(auto-fit, minmax(200px, 3fr))",
+          gap: "40px",
+          marginTop: "80px",
           width: "80%",
         }}
       >
         {[
-          { icon: "🌍", title: "Mode", text: "Fully Digital" },
-          { icon: "📅", title: "Date", text: "11 - 20 April 2025" },
-          { icon: "👥", title: "Registrations", text: "15,000+ Estimated" },
-          { icon: "💰", title: "Prize Pool", text: "10,000 USD / 8,50,000 INR" },
+          { icon: "🌍", title: "Mode", text: "Offline" },
+          { icon: "📅", title: "Date", text: "9-10 April 2025" },
+          { icon: "👥", title: "Registrations", text: "250+ participants" },
+          { icon: "💰", title: "Prize Pool", text: "1 Lakh worth cash prizes" },
         ].map((item, index) => (
-          <NeonGradientCard key={index}>
+          <NeonGradientCard key={index} style>
             <span style={{ fontSize: "2rem" }}>{item.icon}</span>
             <h3 style={{ margin: "10px 0", fontSize: "1.2rem" }}>{item.title}</h3>
             <p style={{ fontSize: "1rem", opacity: 0.8 }}>{item.text}</p>
@@ -96,7 +130,7 @@ const AboutPage = () => {
       {/* Closing Statement */}
       <div
         style={{
-          marginTop: "30px",
+          marginTop: "70px",
           fontSize: "1.5rem",
           fontWeight: "bold",
           color: "#a67cfa",

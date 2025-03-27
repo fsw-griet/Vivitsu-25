@@ -1,115 +1,64 @@
-import  { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { Draggable } from "gsap/Draggable";
-
-gsap.registerPlugin(Draggable);
+import { useEffect, useRef } from "react";
 
 const PortalEffectSlider = () => {
-  const ringRef = useRef(null);
-  const imgRefs = useRef([]);
+  const photoWrapperRef = useRef(null);
+  const animationFrameRef = useRef(null);
 
   useEffect(() => {
-    let xPos = 0;
+    const wrapper = photoWrapperRef.current;
+    let scrollAmount = 0;
+    const speed = 1.5; // Slightly increased speed
 
-    gsap.timeline()
-      .set(ringRef.current, { rotationY: 180, cursor: "grab" })
-      .set(imgRefs.current, {
-        rotateY: (i) => i * -36,
-        transformOrigin: "50% 50% 500px",
-        z: -500,
-        backgroundImage: (i) => `url(https://picsum.photos/id/${i + 32}/600/400/)`,
-        backgroundPosition: (i) => getBgPos(i),
-        backfaceVisibility: "hidden",
-      })
-      .from(imgRefs.current, {
-        duration: 1.5,
-        y: 200,
-        opacity: 0,
-        stagger: 0.1,
-        ease: "expo",
-      });
-
-    const getBgPos = (i) => {
-      return (
-        100 -
-        ((gsap.utils.wrap(0, 360, gsap.getProperty(ringRef.current, "rotationY") - 180 - i * 36) / 360) *
-          500) +
-        "px 0px"
-      );
+    const scrollGallery = () => {
+      if (wrapper) {
+        scrollAmount += speed;
+        if (scrollAmount >= wrapper.scrollWidth / 2) {
+          scrollAmount = 0;
+        }
+        wrapper.scrollLeft = scrollAmount;
+      }
+      animationFrameRef.current = requestAnimationFrame(scrollGallery);
     };
 
-    const drag = (e) => {
-      if (e.touches) e.clientX = e.touches[0].clientX;
+    scrollGallery();
 
-      gsap.to(ringRef.current, {
-        rotationY: `-=${(Math.round(e.clientX) - xPos) % 360}`,
-        onUpdate: () => {
-          gsap.set(imgRefs.current, { backgroundPosition: (i) => getBgPos(i) });
-        },
-      });
-      xPos = Math.round(e.clientX);
-    };
-
-    const dragStart = (e) => {
-      if (e.touches) e.clientX = e.touches[0].clientX;
-      xPos = Math.round(e.clientX);
-      gsap.set(ringRef.current, { cursor: "grabbing" });
-      window.addEventListener("mousemove", drag);
-      window.addEventListener("touchmove", drag);
-    };
-
-    const dragEnd = () => {
-      window.removeEventListener("mousemove", drag);
-      window.removeEventListener("touchmove", drag);
-      gsap.set(ringRef.current, { cursor: "grab" });
-    };
-
-    window.addEventListener("mousedown", dragStart);
-    window.addEventListener("touchstart", dragStart);
-    window.addEventListener("mouseup", dragEnd);
-    window.addEventListener("touchend", dragEnd);
-
-    return () => {
-      window.removeEventListener("mousedown", dragStart);
-      window.removeEventListener("touchstart", dragStart);
-      window.removeEventListener("mouseup", dragEnd);
-      window.removeEventListener("touchend", dragEnd);
-    };
+    return () => cancelAnimationFrame(animationFrameRef.current);
   }, []);
 
+  // Use public path to access images
+  const images = [
+    "1.jpg",
+    "2.jpg",
+    "3.jpg",
+    "4.jpg",
+    "5.jpg",
+    "6.jpg",
+    "7.jpg",
+    "8.jpg",
+    "9.jpg",
+    "10.jpg",
+    "11.jpg",
+    "12.jpg",
+  ];
+
   return (
-    <div style={{
-      width: "100%",
-      height: "100vh",
-      overflow: "hidden",
-      background: "#000",
-      display: "flex",
-      justifyContent: "center",
-      alignItems: "center",
-    }}>
-      <div style={{
-        perspective: "2000px",
-        width: "300px",
-        height: "400px",
-        position: "relative",
-      }}>
-        <div ref={ringRef} style={{
-          width: "100%",
-          height: "100%",
-          transformStyle: "preserve-3d",
-          position: "relative",
-        }}>
-          {[...Array(10)].map((_, i) => (
-            <div
-              key={i}
-              ref={(el) => (imgRefs.current[i] = el)}
-              style={{
-                width: "100%",
-                height: "100%",
-                position: "absolute",
-                backgroundSize: "cover",
-              }}
-            ></div>
+    <div className="container mx-auto text-center p-10">
+      {/* Bigger Title with More Gap */}
+      <h1 className="text-4xl font-bold mb-10 text-white drop-shadow-[0_0_15px_#00FFFF]">
+        Insights of VIVITSU 2024
+      </h1>
+
+      {/* Image Slider */}
+      <div className="overflow-hidden whitespace-nowrap" ref={photoWrapperRef}>
+        <div className="flex space-x-10 w-max"> {/* Increased space-x */}
+          {images.map((src, index) => (
+            <div key={index} className="photo w-80 h-56 flex-shrink-0"> {/* Made images bigger */}
+              <img
+                src={src}
+                alt={`Insight ${index + 1}`}
+                className="w-full h-full object-cover rounded-xl shadow-lg"
+              />
+            </div>
           ))}
         </div>
       </div>
