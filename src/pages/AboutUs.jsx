@@ -1,8 +1,5 @@
-import React from 'react'
 import { FaTrophy, FaMedal, FaStar, FaAward } from "react-icons/fa";
-import "./AboutUs.css";
-
-
+import Faqs from "../components/Faqs";
 const achievements = [
   { year: "2010", title: "Best Student Chapter Award", icon: <FaTrophy /> },
   { year: "2020", title: "Best Accredited Student Branch Award", icon: <FaAward /> },
@@ -11,9 +8,34 @@ const achievements = [
 ];
 const AboutUs = () => {
   return (
+    
+    
     <div className="about-us mt-25">
-      <div className="about-us-vivitsu m-10 rounded-4xl bg-blue-300 p-10">
-        <img src="images/logo.png" alt="" className="vivitsu-logo" />
+         <div
+      style={{
+        position: 'relative',
+        width: '100%',
+        height: '100vh', // You can adjust this based on your needs
+        overflow: 'hidden',
+      }}
+    >
+
+<div className="relative w-full h-screen flex items-center justify-center overflow-hidden">
+        <img
+src="https://media3.giphy.com/media/v1.Y2lkPTc5MGI3NjExYXZxMmd1YnFkcDBzNGQ5cDR4eGRvMjljNWk1NmZyZ3hubmV6MXE0byZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/xTiTnxpQ3ghPiB2Hp6/giphy.gif"          className="absolute inset-0 w-full h-full object-cover"
+          alt="Background Animation"
+        />
+        {/* Dark Overlay for Readability */}
+        <div className="absolute inset-0 bg-blue bg-opacity-10"></div>
+        {/* Heading Text */}
+        <h1 className="relative text-6xl md:text-7xl font-bold text-black text-center uppercase z-10">
+  About Us
+</h1>
+      </div>
+
+    </div>
+    <div className="about-us-vivitsu m-10 rounded-4xl bg-transparent p-10 text-white text-center text-lg  border-4 border-neon">
+    <img src="images/logo.png" alt="" className="vivitsu-logo" />
         <h1 className="text-3xl text-center">VIVITSU</h1>
 
         <div className="about ">
@@ -55,8 +77,8 @@ const AboutUs = () => {
           </ul>
         </div>
       </div>
-      <div className="about-us-fsw m-10 rounded-4xl bg-red-300 p-10">
-        <div className="heading text-3xl text-center">
+      <div className="about-us-fsw m-10 rounded-4xl bg-transparent p-10 text-white text-center text-lg  border-4 border-neon">
+        <div className="heading text-10l text-center">
           <img src="images/logo.png" alt="" className="fsw-logo" />
           <h1>FSW</h1>
         </div>
@@ -86,24 +108,31 @@ const AboutUs = () => {
         </div>
       </div>
       <div className="py-16 m-4 text-center">
-      <h2 className="text-4xl font-bold text-red-700 mb-8">Our Achievements</h2>
+      <h2 className="text-4xl font-bold text-white mb-8">Our Achievements</h2>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
         {achievements.map((achievement, index) => (
           <div
             key={index}
-            className="relative bg-white p-6 rounded-xl shadow-xl border-t-4 border-red-600 hover:scale-105 transition-transform duration-300"
+            className="relative bg-white p-6 rounded-xl shadow-xl border-t-4 border-blue-800 hover:scale-105 transition-transform duration-300"
           >
             <div className="absolute top-[-20px] left-1/2 transform -translate-x-1/2 w-12 h-12 flex items-center justify-center text-white bg-blue-600 rounded-full shadow-lg text-2xl">
               {achievement.icon}
             </div>
-            <p className="text-yellow-600 font-semibold mt-6">{achievement.year}</p>
+            <p className="text-blue-600 font-semibold mt-6">{achievement.year}</p>
             <h3 className="text-lg font-semibold text-gray-800 mt-2">{achievement.title}</h3>
           </div>
         ))}
       </div>
     </div>
-    </div>
+    <div className="heading text-10l text-center">
+          
+          <h1>Frequently Asked Questions</h1>
+        </div>
+    <Faqs />
+
+    </div>  
   );
+
 };
 
 export default AboutUs

@@ -1,0 +1,10 @@
+/* styles.css or App.css or any global stylesheet */
+@keyframes typewriter {
+    from {
+      width: 0;
+    }
+    to {
+      width: 100%;
+    }
+  }
+  
