@@ -1,10 +1,11 @@
 import { useState, useEffect } from "react";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom"; // Import useNavigate
 import { FaBars, FaTimes } from "react-icons/fa";
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate(); // Initialize useNavigate
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +15,11 @@ const Navbar = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const handleNavigation = (path) => {
+    setIsOpen(false); // Close the menu
+    navigate(path); // Navigate to the new page
+  };
 
   return (
     <nav
@@ -51,7 +57,7 @@ const Navbar = () => {
             )}
           </button>
 
-          {/* Navigation Links - Now sliding from right */}
+          {/* Navigation Links */}
           <ul
             className={`md:flex md:items-center md:space-x-6 text-lg fixed md:static top-0 right-0 w-64 md:w-auto h-screen md:h-auto transition-all duration-500 ease-in-out transform ${
               isOpen
@@ -59,16 +65,6 @@ const Navbar = () => {
                 : "translate-x-full md:translate-x-0"
             }`}
           >
-            {/* Mobile Menu Header */}
-            {isOpen && (
-              <div className="md:hidden absolute top-6 right-6">
-                <FaTimes
-                  className="text-3xl text-white cursor-pointer hover:text-gray-300 transition-colors"
-                  onClick={() => setIsOpen(false)}
-                />
-              </div>
-            )}
-
             <div className="h-full md:h-auto flex flex-col md:flex-row items-start justify-center md:justify-start space-y-6 md:space-y-0 py-16 md:py-0 pl-8 md:pl-0">
               {[
                 { name: "Home", path: "/" },
@@ -78,15 +74,13 @@ const Navbar = () => {
                 { name: "Team", path: "/team" },
               ].map((item, index) => (
                 <li key={index} className="relative group w-full md:w-auto">
-                  <Link
-                    to={item.path}
-                    onClick={() => setIsOpen(false)}
+                  <button
+                    onClick={() => handleNavigation(item.path)} // Use handleNavigation
                     className="px-4 py-3 text-white hover:text-blue-400 transition-colors duration-300 text-xl md:text-base font-medium flex items-center"
                   >
                     {item.name}
                     <span className="absolute bottom-0 left-1/2 w-0 h-0.5 bg-blue-400 transition-all duration-300 group-hover:w-4/5 group-hover:left-1/10"></span>
-                  </Link>
-                  {/* Dividing line for mobile */}
+                  </button>
                   {isOpen && index < 4 && (
                     <div className="w-full h-px bg-gray-700 mt-3 md:hidden"></div>
                   )}
@@ -109,30 +103,3 @@ const Navbar = () => {
 };
 
 export default Navbar;
-
-<style jsx>{`
-  /* Custom animations */
-  @keyframes slideInRight {
-    from {
-      transform: translateX(100%);
-    }
-    to {
-      transform: translateX(0);
-    }
-  }
-
-  .mobile-menu {
-    animation: slideInRight 0.3s ease-out;
-  }
-
-  /* Smooth transitions */
-  .transition-menu {
-    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
-  }
-
-  /* Mobile menu divider */
-  .mobile-divider {
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    margin: 0.75rem 0;
-  }
-`}</style>
