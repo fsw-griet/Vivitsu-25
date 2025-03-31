@@ -6,6 +6,11 @@ const Team = () => {
   const teamData = [
     {
       members: [
+        { name: "Dr. K Ravi Kiran", designation: "Faculty Coordinator",photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743438363/ravi_kiran_sir_bslsc3.jpg", linkedin: "https://www.linkedin.com/in/sree-tripura-r-8b3365284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      ]
+    },
+    {
+      members: [
         { name: "R.Sree Tripura", designation: "President",photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743426484/IMG-20250330-WA0020_-_sree_tripura_fs7noh.jpg", linkedin: "https://www.linkedin.com/in/sree-tripura-r-8b3365284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
         { name: "Gayathri Kodipaka",designation: "Vice-President", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_899,h_1000,g_auto/v1743426484/IMG-20250218-WA0035_-_Gayathri_Kodipaka_glbveb.jpg", linkedin: "https://www.linkedin.com/in/gayathri-kodipaka-05755b2a6/" },
         { name: "Dheeraj Madugula",designation: "General Secretary", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_1037,h_1000,g_auto/v1743427148/WhatsApp_Image_2025-03-31_at_6.48.18_PM_wqfa83.jpg", linkedin: "http://www.linkedin.com/in/dheeraj-madugula" },
@@ -16,23 +21,33 @@ const Team = () => {
       members: [
         { name: "Avinash",designation: "Tech Lead", photo: "fsw_logo.png", linkedin: "https://linkedin.com/in/sarahconnor" },
         { name: "Soujanya Reddy",designation: "Tech Co-Lead", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743426467/IMG-20241106-WA0000_-_Soujanya_Narra_gp9chj.jpg", linkedin: "https://www.linkedin.com/in/soujanya-reddy-narra" },
-        { name: "Naina Thippani",designation: "Tech Member", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_800,h_700,g_auto/v1743426495/Screenshot_2025-01-31_202822_-_Naina_pankqc.png", linkedin: "https://www.linkedin.com/in/naina-thippani-99a095299/" },
-        { name: "Shaik Nada",designation: "Tech Member", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_500,h_500,g_auto/v1743430281/WhatsApp_Image_2025-03-31_at_7.39.58_PM_fdsxpe.jpg", linkedin: "https://www.linkedin.com/in/shaik-nada-20831a30a/" },
-        { name: "Subham Kumar Shee",designation: "Tech Member", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_350,h_490,g_auto/v1743426464/A-20250216-WA0006_-_Subham_kumar_fhw4hr.jpg", linkedin: "https://www.linkedin.com/in/subham-kumar-221886328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
         { name: "Eshwar",designation: "Tech Member", photo: "fsw_logo.png", linkedin: "https://linkedin.com/in/robertchen" },
         { name: "Swaransheel Chinthamalla",designation: "Tech Member", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_2000,h_2000,g_auto/v1743426465/IMG_5164_-_swaransheel_Chinthamalla_d8jyti.jpg", linkedin: "https://www.linkedin.com/in/swaransheel-chinthamalla-741979265" },
       ]
     },
     {
-        title: "Publicity & Event Management",
+      members: [
+        { name: "Naina Thippani",designation: "Tech Member", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_800,h_700,g_auto/v1743426495/Screenshot_2025-01-31_202822_-_Naina_pankqc.png", linkedin: "https://www.linkedin.com/in/naina-thippani-99a095299/" },
+        { name: "Shaik Nada",designation: "Tech Member", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_500,h_500,g_auto/v1743430281/WhatsApp_Image_2025-03-31_at_7.39.58_PM_fdsxpe.jpg", linkedin: "https://www.linkedin.com/in/shaik-nada-20831a30a/" },
+        { name: "Subham Kumar Shee",designation: "Tech Member", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_350,h_490,g_auto/v1743426464/A-20250216-WA0006_-_Subham_kumar_fhw4hr.jpg", linkedin: "https://www.linkedin.com/in/subham-kumar-221886328?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+      ]
+    },
+    {
+        title: "Event Management",
         members: [
-          { name: "Emima",designation: "Publicity Lead", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743426464/1730120901985_-_Emima_Reddy_rfnujb.jpg", linkedin: "https://www.linkedin.com/in/emima-reddy-959574305" },
-          { name: "Sai Teja Reddy",designation: "Publicity Lead", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743426466/IMG_6591_-_Sai_Teja_Reddy_xwvd4i.jpg", linkedin: "https://www.linkedin.com/in/sai-teja-reddy-017963255/" },
           { name: "Ritvik Bairagouni",designation: "Event Management Lead", photo: "fsw_logo.png", linkedin: "https://linkedin.com/in/lisawong" },
           { name: "Revanth Sallangula",designation: "Event Management Co-Lead ", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743426496/Screenshot_2025-03-25_235421_-_Revanth_Sallangula_ohnuxd.png", linkedin: "linkedin.com/in/revsal" },
           { name: "Anjani Sai",designation: "Event Management Member", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_1000,h_1000,g_auto/v1743426465/Anjani_sai_-_Anjani_Sai_z3bzxp.jpg", linkedin: "https://www.linkedin.com/in/soma-yella-anjani-sai-307932336?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
           { name: "M Deekshitha",designation: "Event Management Member", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_1000,h_1500,g_auto/v1743426499/vivitsu_-_Deekshitha_M_fy4qpi.jpg", linkedin: "https://www.linkedin.com/in/deekshitham028" },
           { name: "Narayan Karthikeyan",designation: "Event Management Member", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743426466/IMG_6803_-_Karthikeya_K_uo0cgv.jpg", linkedin: "https://www.linkedin.com/in/karthikeya-k-b48b5b27a?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=ios_app" },
+
+        ]
+      },
+      {
+        title: "Publicity",
+        members: [
+          { name: "Emima",designation: "Publicity Lead", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743426464/1730120901985_-_Emima_Reddy_rfnujb.jpg", linkedin: "https://www.linkedin.com/in/emima-reddy-959574305" },
+          { name: "Sai Teja Reddy",designation: "Publicity Lead", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743426466/IMG_6591_-_Sai_Teja_Reddy_xwvd4i.jpg", linkedin: "https://www.linkedin.com/in/sai-teja-reddy-017963255/" },
           { name: "Juvvadi Pranaya",designation: "Publicity Member", photo: "fsw_logo.png", linkedin: "https://linkedin.com/in/robertchen" },
           { name: "K.Uday Kumar",designation: "Publicity Member", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743431007/IMG_5035_-_Uday_Kumar2_q3f5h1.jpg", linkedin: "https://www.linkedin.com/in/uday-kumar-318690303?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
           { name: "Siva Sudhamsh",designation: "Publicity Member", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,h_500,g_auto/v1743426500/WhatsApp_Image_2025-03-25_at_22.11.42_87672f3b_-_Siva_Sudhamsh_dnptck.jpg", linkedin: "https://www.linkedin.com/in/siva-sudhamsh-8589082ab?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
@@ -58,12 +73,16 @@ const Team = () => {
         ]
       },
       {
-        title: "Design & Art",
+        title: "Design ",
         members: [
           { name: "Susanna Bhukya",designation: "Graphic Designer Lead", photo: "fsw_logo.png", linkedin: "https://linkedin.com/in/sarahconnor" },
           { name: "Jhansi Lakshmi",designation: "Creative Lead", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_1400,h_1000,g_auto/v1743426499/WhatsApp_Image_2024-09-24_at_11.33.53_PM_-_jhanu_A_-_jhanu_A_bhgb9n.jpg", linkedin: "https://www.linkedin.com/in/jhansi-lakshmi-924447301/" },
           { name: "Keerthi BogiReddy",designation: "Graphic Designer Co-Lead", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743426466/IMG_20250325_225005_-_Keerthi_Bogireddy_jgpxsw.jpg", linkedin: "https://www.linkedin.com/in/keerthi-bogireddy-9a00a2291/" },
           { name: "Anirudh Inturi",designation: "Graphic Designer", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743426463/1734688689951_-_Anirudh_Inturi_fjfpdf.jpg", linkedin: "https://www.linkedin.com/in/anirudh-inturi-a043322a6/" },
+        ]
+      },
+      {
+        members: [
           { name: "Almas Tamanna",designation: "Graphic Designer", photo: "fsw_logo.png", linkedin: "https://linkedin.com/in/robertchen" },
           { name: "Ruthvik Sharma",designation: "Graphic Designer", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_1900,h_1400,g_auto/v1743426499/SmartSelect_20250205-202610_Gallery_-_Ruthvik_Sharma_orfgph.jpg", linkedin: "https://www.linkedin.com/in/ruthvik-s-6a4a732a1" },
           { name: "Arnipalli Nanda Nandan ",designation: "Graphic Designer", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_2300,h_1000/v1743426465/dp-2_-_Nanda_nandan_Arnipalli_u7az7v.jpg", linkedin: "https://www.linkedin.com/in/nanda-nandan-arnipalli-442598336/" },
@@ -89,7 +108,7 @@ const Team = () => {
     <div style={{
       padding: "2rem",
       textAlign: "center",
-      backgroundColor: "#121212",
+      backgroundColor: "transparent",
       minHeight: "100vh"
     }}>      
        <div style={{ marginTop: "3rem" }}>
