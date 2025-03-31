@@ -7,21 +7,19 @@ const Navbar = () => {
   const navigate = useNavigate();
 
   const handleAboutUsClick = () => {
-    // If on home page, scroll to FSW section
-    if (window.location.pathname === '/') {
-      const fswSection = document.querySelector('#fsw-section');
+    if (window.location.pathname === "/") {
+      const fswSection = document.querySelector("#fsw-section");
       if (fswSection) {
-        fswSection.scrollIntoView({ behavior: 'smooth' });
+        fswSection.scrollIntoView({ behavior: "smooth" });
       }
       setIsOpen(false);
     } else {
-      // Navigate to home page and scroll to FSW section
-      navigate('/', { state: { scrollToFSW: true } });
+      navigate("/", { state: { scrollToFSW: true } });
     }
   };
 
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 shadow-md">
+    <nav className="fixed top-0 left-0 w-full z-50 shadow-lg bg-black">
       <div className="flex justify-between items-center px-8 py-4">
         {/* Left Section: Logos */}
         <div className="flex items-center space-x-4">
@@ -30,30 +28,20 @@ const Navbar = () => {
         </div>
 
         {/* Mobile Menu Button */}
-        <div className="md:hidden z-50" onClick={() => setIsOpen(!isOpen)}>
+        <div className="md:hidden cursor-pointer z-50" onClick={() => setIsOpen(!isOpen)}>
           {!isOpen && <FaBars className="text-2xl text-white" />}
         </div>
 
         {/* Right Section: Navigation Links */}
-        <ul
-          className={`md:flex md:space-x-8 text-white text-lg fixed md:static top-0 left-0 w-full md:w-auto h-screen md:h-auto bg-transparent shadow-md md:shadow-none transition-transform duration-300 ease-in-out ${
-            isOpen
-              ? "translate-y-0 flex flex-col items-center justify-center bg-black/80"
-              : "-translate-y-full"
-          } md:translate-y-0`}
-        >
+        <ul className={`md:flex md:space-x-8 text-white text-lg fixed md:static top-0 left-0 w-full md:w-auto h-screen md:h-auto bg-transparent shadow-md md:shadow-none transition-transform duration-300 ease-in-out ${isOpen ? "translate-y-0 flex flex-col items-center justify-center bg-black/80" : "-translate-y-full"} md:translate-y-0`}>
           {/* Close Button in Mobile View */}
           {isOpen && (
-            <div
-              className="absolute top-4 right-6 text-2xl cursor-pointer md:hidden"
-              onClick={() => setIsOpen(false)}
-            >
+            <div className="absolute top-4 right-6 text-2xl cursor-pointer md:hidden" onClick={() => setIsOpen(false)}>
               <FaTimes className="text-white" />
             </div>
           )}
 
-          {[
-            { name: "Home", path: "/" },
+          {[{ name: "Home", path: "/" },
             { name: "About Us", path: "about", onClick: handleAboutUsClick },
             { name: "Events", path: "/events" },
             { name: "Vivitsu", path: "/vivitsu" },
@@ -61,18 +49,11 @@ const Navbar = () => {
           ].map((item, index) => (
             <li key={index} className="w-full md:w-auto">
               {item.onClick ? (
-                <div
-                  onClick={item.onClick}
-                  className="block w-full p-4 md:p-0 text-center hover:text-blue-600 hover:font-bold hover:text-xl transition-all duration-300 cursor-pointer"
-                >
+                <div onClick={item.onClick} className="block w-full p-4 md:p-0 text-center hover:text-blue-500 hover:font-bold hover:text-xl transition-all duration-300 cursor-pointer highlight-box">
                   {item.name}
                 </div>
               ) : (
-                <Link
-                  to={item.path}
-                  onClick={() => setIsOpen(false)}
-                  className="block w-full p-4 md:p-0 text-center hover:text-blue-600 hover:font-bold hover:text-xl transition-all duration-300"
-                >
+                <Link to={item.path} onClick={() => setIsOpen(false)} className="block w-full p-4 md:p-0 text-center hover:text-blue-500 hover:font-bold hover:text-xl transition-all duration-300 highlight-box">
                   {item.name}
                 </Link>
               )}
@@ -82,12 +63,7 @@ const Navbar = () => {
       </div>
 
       {/* Overlay to close menu when clicking outside */}
-      {isOpen && (
-        <div
-          className="fixed inset-0 md:hidden bg-black opacity-50"
-          onClick={() => setIsOpen(false)}
-        ></div>
-      )}
+      {isOpen && <div className="fixed inset-0 md:hidden bg-black opacity-50" onClick={() => setIsOpen(false)}></div>}
     </nav>
   );
 };

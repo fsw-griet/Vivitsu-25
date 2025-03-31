@@ -65,6 +65,14 @@ const Home = () => {
 
   return (
     <>
+        <video
+      className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+      src="/background.mp4"
+      autoPlay
+      loop
+      muted
+      playsInline
+    />
       {/* Hero Section - Responsive Layout */}
       <div className="relative w-full h-screen overflow-hidden text-center">
         <div className="absolute inset-0 z-0">
