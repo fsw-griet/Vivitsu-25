@@ -17,6 +17,11 @@ export default function SponsorsPage() {
       logo: "https://drmadhuthumu.com/wp-content/uploads/2020/12/dr-madhu-thumu-orthopedist.png",
       link: "https://drmadhuthumu.com/",
     },
+    {
+      name: "CodeGnan",
+      logo: "https://media.licdn.com/dms/image/v2/C510BAQE2dFd6hMRZmw/company-logo_200_200/company-logo_200_200/0/1630626957056/codegnan_logo?e=2147483647&v=beta&t=DN4ALlhbDlbf9h0bk23HqwWMhtkTgVlKZlrgCMBPoLE",
+      link: "https://codegnan.com/",
+    },
   ];
 
   return (
@@ -34,7 +39,7 @@ export default function SponsorsPage() {
       </motion.h1>
 
       <motion.div
-        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-12 mt-12 relative z-10 justify-center"
+        className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-12 mt-12 relative z-10 justify-center"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 1.2 }}

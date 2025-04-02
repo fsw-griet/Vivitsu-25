@@ -6,7 +6,7 @@ const Team = () => {
   const teamData = [
     {
       members: [
-        { name: "Dr. K Ravi Kiran", designation: "Faculty Coordinator",photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743438363/ravi_kiran_sir_bslsc3.jpg", linkedin: "https://www.linkedin.com/in/sree-tripura-r-8b3365284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
+        { name: "Dr. K Ravi Kiran", designation: "Faculty Coordinator",photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743438363/ravi_kiran_sir_bslsc3.jpg", linkedin: "" },
       ]
     },
     {
@@ -14,6 +14,7 @@ const Team = () => {
         { name: "R.Sree Tripura", designation: "President",photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743426484/IMG-20250330-WA0020_-_sree_tripura_fs7noh.jpg", linkedin: "https://www.linkedin.com/in/sree-tripura-r-8b3365284?utm_source=share&utm_campaign=share_via&utm_content=profile&utm_medium=android_app" },
         { name: "Gayathri Kodipaka",designation: "Vice-President", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_899,h_1000,g_auto/v1743426484/IMG-20250218-WA0035_-_Gayathri_Kodipaka_glbveb.jpg", linkedin: "https://www.linkedin.com/in/gayathri-kodipaka-05755b2a6/" },
         { name: "Dheeraj Madugula",designation: "General Secretary", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_1037,h_1000,g_auto/v1743427148/WhatsApp_Image_2025-03-31_at_6.48.18_PM_wqfa83.jpg", linkedin: "http://www.linkedin.com/in/dheeraj-madugula" },
+        { name: "Jhansi Lakshmi",designation: "Joint Secretary", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_1400,h_1000,g_auto/v1743426499/WhatsApp_Image_2024-09-24_at_11.33.53_PM_-_jhanu_A_-_jhanu_A_bhgb9n.jpg", linkedin: "https://www.linkedin.com/in/jhansi-lakshmi-924447301/" },
       ]
     },
     {
@@ -76,14 +77,13 @@ const Team = () => {
         title: "Design ",
         members: [
           { name: "Susanna Bhukya",designation: "Graphic Designer Lead", photo: "fsw_logo.png", linkedin: "https://linkedin.com/in/sarahconnor" },
-          { name: "Jhansi Lakshmi",designation: "Creative Lead", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_1400,h_1000,g_auto/v1743426499/WhatsApp_Image_2024-09-24_at_11.33.53_PM_-_jhanu_A_-_jhanu_A_bhgb9n.jpg", linkedin: "https://www.linkedin.com/in/jhansi-lakshmi-924447301/" },
           { name: "Keerthi BogiReddy",designation: "Graphic Designer Co-Lead", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743426466/IMG_20250325_225005_-_Keerthi_Bogireddy_jgpxsw.jpg", linkedin: "https://www.linkedin.com/in/keerthi-bogireddy-9a00a2291/" },
           { name: "Anirudh Inturi",designation: "Graphic Designer", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743426463/1734688689951_-_Anirudh_Inturi_fjfpdf.jpg", linkedin: "https://www.linkedin.com/in/anirudh-inturi-a043322a6/" },
+          { name: "Almas Tamanna",designation: "Graphic Designer", photo: "fsw_logo.png", linkedin: "https://linkedin.com/in/robertchen" },
         ]
       },
       {
         members: [
-          { name: "Almas Tamanna",designation: "Graphic Designer", photo: "fsw_logo.png", linkedin: "https://linkedin.com/in/robertchen" },
           { name: "Ruthvik Sharma",designation: "Graphic Designer", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_1900,h_1400,g_auto/v1743426499/SmartSelect_20250205-202610_Gallery_-_Ruthvik_Sharma_orfgph.jpg", linkedin: "https://www.linkedin.com/in/ruthvik-s-6a4a732a1" },
           { name: "Arnipalli Nanda Nandan ",designation: "Graphic Designer", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_2300,h_1000/v1743426465/dp-2_-_Nanda_nandan_Arnipalli_u7az7v.jpg", linkedin: "https://www.linkedin.com/in/nanda-nandan-arnipalli-442598336/" },
         ]
