@@ -81,7 +81,7 @@ const Home = () => {
             <img
               src="fsw_logo.png"
               alt="Software Logo"
-              className="h-40 w-40 md:h-60 md:w-60 lg:h-80 lg:w-80 object-cover"
+              className="h-40 w-40 md:h-60 md:w-60 lg:h-96 lg:w-96 object-cover rounded-sm"
               style={{
                 maxWidth: "200px",
                 width: "100%",
@@ -115,39 +115,6 @@ const Home = () => {
         </p>
       </div>
 
-      {/*
-      <div className="bg-gradient-to-b from-black to-gray-900 ">
-        <LampContainer>
-          <motion.h1
-            initial={{ opacity: 0.5, y: 50 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            transition={{
-              delay: 0.3,
-              duration: 0.8,
-              ease: "easeInOut",
-            }}
-            className="mt-100 md:mt-32 bg-gradient-to-br from-slate-300 to-slate-400 py-2 bg-clip-text text-center text-xl md:text-3xl lg:text-4xl font-medium tracking-tight text-transparent mb-6 md:mb-10"
-          >
-            WHO ARE WE?
-          </motion.h1>
-
-          <div className="flex flex-col md:flex-row justify-center gap-6 md:gap-10 lg:gap-20 p-4 md:p-10 w-full max-w-6xl mx-auto">
-            <div className="bg-gray-800 shadow-lg p-4 md:p-6 rounded-lg flex-1 transition-transform duration-300 hover:scale-105">
-              <h3 className="text-lg md:text-xl font-bold text-blue-400">VISION</h3>
-              <p className="text-sm md:text-base text-gray-300 mt-2">
-                To revolutionize the technology landscape by providing cutting-edge solutions that empower businesses to thrive in the digital era.
-              </p>
-            </div>
-            <div className="bg-gray-800 shadow-lg p-4 md:p-6 rounded-lg flex-1 transition-transform duration-300 hover:scale-105">
-              <h3 className="text-lg md:text-xl font-bold text-blue-400">MISSION</h3>
-              <p className="text-sm md:text-base text-gray-300 mt-2">
-                Our mission is to deliver exceptional tech solutions that address complex challenges with simplicity and elegance.
-              </p>
-            </div>
-          </div>
-        </LampContainer>
-      </div> */}
-
       {/* FSW Section */}
       <div
         ref={fswSectionRef}
@@ -159,7 +126,7 @@ const Home = () => {
             <div className="bg-white/10 p-8 rounded-2xl border border-white/20">
               <div className="flex items-center mb-6">
                 <img
-                  src="\public\fsw_logo.png"
+                  src="fsw_logo.png"
                   alt="FSW Logo"
                   className="w-24 h-24 mr-6 rounded-full"
                 />
