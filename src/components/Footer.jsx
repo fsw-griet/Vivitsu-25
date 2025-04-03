@@ -36,11 +36,11 @@ const Footer = () => {
         <div className="w-full md:w-1/3">
           <h2 className="text-lg font-semibold">Contact Us</h2>
           <div className="text-gray-400 mt-2 space-y-2">
-            <p className="flex justify-center md:justify-start items-center gap-2">
+            <a href="https://maps.app.goo.gl/FyjPJxwAbyJJihkz9" target="_blank"><p className="flex justify-center md:justify-start items-center gap-2">
               <FaMapMarkerAlt /> GRIET, Hyderabad
-            </p>
+            </p></a>
             <p className="flex justify-center md:justify-start items-center gap-2">
-              <FaEnvelope /> fsw@griet.ac.in
+              <FaEnvelope /> freesoftwarewinggriet.fsw@gmail.com
             </p>
           </div>
         </div>
