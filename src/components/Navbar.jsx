@@ -22,9 +22,9 @@ const Navbar = () => {
     window.scrollTo({ top: 0, behavior: "smooth" });
   }, [location]);
 
-  const handleNavigation = (path) => {
+  const handleNavigation = (path, state = {}) => {
     setIsOpen(false); // Close the menu
-    navigate(path); // Navigate to the new page
+    navigate(path, { state }); // Navigate to the new page with state
   };
 
   return (
@@ -45,12 +45,12 @@ const Navbar = () => {
             <img
               src="goka.jpeg"
               alt="Logo 1"
-              className="h-12 rounded-sm transition-transform duration-300 hover:scale-105"
+              className="h-12 rounded-sm" // Removed transition-transform and hover:scale-105
             />
             <img
               src="fsw_logo.png"
               alt="Logo 2"
-              className="h-12 rounded-sm transition-transform duration-300 hover:scale-105"
+              className="h-12 rounded-sm" // Removed transition-transform and hover:scale-105
             />
           </div>
 
@@ -77,14 +77,14 @@ const Navbar = () => {
             <div className="h-full md:h-auto flex flex-col md:flex-row items-start justify-center md:justify-start space-y-6 md:space-y-0 py-16 md:py-0 pl-8 md:pl-0">
               {[
                 { name: "Home", path: "/" },
-                { name: "About Us", path: "/aboutus" },
+                { name: "About Us", path: "/", state: { scrollToFSW: true } }, // Add state for scrolling
                 { name: "Events", path: "/events" },
                 { name: "Vivitsu", path: "/vivitsu" },
                 { name: "Team", path: "/team" },
               ].map((item, index) => (
                 <li key={index} className="relative group w-full md:w-auto">
                   <button
-                    onClick={() => handleNavigation(item.path)} // Use handleNavigation
+                    onClick={() => handleNavigation(item.path, item.state)} // Pass state if available
                     className="px-4 py-3 text-white hover:text-blue-400 transition-colors duration-300 text-xl md:text-base font-medium flex items-center"
                   >
                     {item.name}

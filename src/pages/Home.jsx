@@ -6,7 +6,7 @@ import { EvervaultCard } from "../components/evalcard";
 import { Boxes } from "../components/Retro";
 import { FaFilePdf } from "react-icons/fa";
 import { FaCode, FaUsers, FaRegLightbulb, FaLaptopCode } from "react-icons/fa";
-import './App.css';
+import "./App.css";
 
 const FSWObjective = ({ icon, text }) => (
   <div className="flex items-center space-x-4 bg-white/10 p-4 rounded-lg hover:bg-white/20 transition-all duration-300">
@@ -18,7 +18,7 @@ const FSWObjective = ({ icon, text }) => (
 const Home = () => {
   const location = useLocation();
   const navigate = useNavigate();
-  const [displayText, setDisplayText] = useState('');
+  const [displayText, setDisplayText] = useState("");
   const fullText = "FREE SOFTWARE WING";
   const fswSectionRef = useRef(null);
 
@@ -42,68 +42,66 @@ const Home = () => {
   }, []);
 
   useEffect(() => {
-    // Check if navigation state includes scrollToFSW
     if (location.state?.scrollToFSW && fswSectionRef.current) {
-      fswSectionRef.current.scrollIntoView({ behavior: 'smooth' });
-      
+      fswSectionRef.current.scrollIntoView({ behavior: "smooth" });
+
       // Clear the state to prevent repeated scrolling
       window.history.replaceState({}, document.title);
     }
   }, [location]);
 
   const handlePastEventsClick = () => {
-    navigate('/events');
+    navigate("/events");
   };
 
   const handleCoreCommitteeClick = () => {
-    navigate('/team');
+    navigate("/team");
   };
 
   const handleVivitsuClick = () => {
-    navigate('/vivitsu');
+    navigate("/vivitsu");
   };
 
   return (
     <>
-        <video
-      className="absolute top-0 left-0 w-full h-full object-cover -z-10"
-      src="/background.mp4"
-      autoPlay
-      loop
-      muted
-      playsInline
-    />
+      <video
+        className="absolute top-0 left-0 w-full h-full object-cover -z-10"
+        src="/background.mp4"
+        autoPlay
+        loop
+        muted
+        playsInline
+      />
       {/* Hero Section - Responsive Layout */}
       <div className="relative w-full h-screen overflow-hidden text-center">
-        <div className="absolute inset-0 z-0">
-          {/* <Boxes /> */}
-        </div>
+        <div className="absolute inset-0 z-0">{/* <Boxes /> */}</div>
 
         <div className="relative z-10 flex flex-col md:flex-row items-center justify-center md:justify-between w-full md:pl-20 mt-40 md:mt-80 px-4 md:px-0">
           <div className="flex justify-center w-full md:w-auto mb-6 md:mb-0">
-            <img 
-              src="fsw_logo.png" 
-              alt="Software Logo" 
+            <img
+              src="fsw_logo.png"
+              alt="Software Logo"
               className="h-40 w-40 md:h-60 md:w-60 lg:h-80 lg:w-80 object-cover"
               style={{
-                maxWidth: '200px',
-                width: '100%',
-                height: 'auto'
+                maxWidth: "200px",
+                width: "100%",
+                height: "auto",
               }}
             />
           </div>
-          
+
           <div className="flex items-center justify-center w-full md:ml-10 md:mr-20">
             <h1
               className="font-mono"
               style={{
-                fontFamily: 'Lucida Console',
-                textShadow: '0 0 5px #00bfff, 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 40px #00f, 0 0 60px #00f',
-                color: '#fff',
-                fontSize: 'clamp(1.5rem, 5vw, 4rem)',
-                whiteSpace: 'nowrap',
-                fontWeight: 'bold',
-                textAlign: 'center',
+                fontFamily: "Lucida Console",
+                textShadow:
+                  "0 0 5px #00bfff, 0 0 10px #00bfff, 0 0 20px #00bfff, 0 0 40px #00f, 0 0 60px #00f",
+                color: "#fff",
+                fontSize: "clamp(1.5rem, 5vw, 4rem)",
+                whiteSpace: "nowrap",
+                fontWeight: "bold",
+                textAlign: "center",
               }}
             >
               {displayText}
@@ -111,7 +109,7 @@ const Home = () => {
             </h1>
           </div>
         </div>
-        
+
         <p className="mt-2 text-base md:text-lg text-white text-center px-4">
           Promoting open-source innovation, collaboration, and software freedom.
         </p>
@@ -151,8 +149,8 @@ const Home = () => {
       </div> */}
 
       {/* FSW Section */}
-      <div 
-        ref={fswSectionRef} 
+      <div
+        ref={fswSectionRef}
         id="fsw-section"
         className="bg-gradient-to-b from-black to-gray-900 py-12 md:py-20"
       >
@@ -160,53 +158,62 @@ const Home = () => {
           <div className="grid md:grid-cols-2 gap-12 items-center">
             <div className="bg-white/10 p-8 rounded-2xl border border-white/20">
               <div className="flex items-center mb-6">
-                <img 
-                  src="\public\fsw_logo.png" 
-                  alt="FSW Logo" 
-                  className="w-24 h-24 mr-6 rounded-full" 
+                <img
+                  src="\public\fsw_logo.png"
+                  alt="FSW Logo"
+                  className="w-24 h-24 mr-6 rounded-full"
                 />
                 <h2 className="text-4xl font-bold text-white">FSW</h2>
               </div>
               <p className="text-gray-300 mb-6 leading-relaxed">
-                Free Software Wing (FSW) is a dynamic technical student body at GRIET, 
-                dedicated to promoting Free and Open Source Software (FOSS) culture. 
-                We're passionate about creating awareness, fostering innovation, 
-                and empowering students through technology.
+                Free Software Wing (FSW) is a dynamic technical student body at
+                GRIET, dedicated to promoting Free and Open Source Software
+                (FOSS) culture. We're passionate about creating awareness,
+                fostering innovation, and empowering students through
+                technology.
               </p>
               <div className="space-y-4">
-                <FSWObjective 
+                <FSWObjective
                   icon={<FaCode />}
                   text="Promote FOSS usage and benefits among students"
                 />
-                <FSWObjective 
+                <FSWObjective
                   icon={<FaUsers />}
                   text="Encourage student contributions to FOSS community"
                 />
-                <FSWObjective 
+                <FSWObjective
                   icon={<FaRegLightbulb />}
                   text="Provide platform for learning and collaboration"
                 />
-                <FSWObjective 
+                <FSWObjective
                   icon={<FaLaptopCode />}
                   text="Foster innovation and creativity in tech"
                 />
               </div>
             </div>
             <div>
-              <h3 className="text-3xl font-bold text-white mb-6">Our Mission</h3>
+              <h3 className="text-3xl font-bold text-white mb-6">
+                Our Mission
+              </h3>
               <div className="space-y-4">
                 <div className="bg-white/10 p-6 rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <h4 className="text-xl font-semibold text-blue-400 mb-3">Technical Empowerment</h4>
+                  <h4 className="text-xl font-semibold text-blue-400 mb-3">
+                    Technical Empowerment
+                  </h4>
                   <p className="text-gray-300">
-                    Equip students with cutting-edge technological skills through workshops, 
-                    seminars, and hands-on learning experiences.
+                    Equip students with cutting-edge technological skills
+                    through workshops, seminars, and hands-on learning
+                    experiences.
                   </p>
                 </div>
                 <div className="bg-white/10 p-6 rounded-xl border border-white/20 hover:bg-white/20 transition-all duration-300">
-                  <h4 className="text-xl font-semibold text-blue-400 mb-3">Community Collaboration</h4>
+                  <h4 className="text-xl font-semibold text-blue-400 mb-3">
+                    Community Collaboration
+                  </h4>
                   <p className="text-gray-300">
-                    Build a vibrant community of tech enthusiasts who collaborate, 
-                    share knowledge, and drive technological innovation.
+                    Build a vibrant community of tech enthusiasts who
+                    collaborate, share knowledge, and drive technological
+                    innovation.
                   </p>
                 </div>
               </div>
@@ -240,17 +247,19 @@ const Home = () => {
         <div className="w-full max-w-6xl">
           <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 lg:gap-20">
             {[
-              { text: 'Past Events', onClick: handlePastEventsClick },
-              { text: 'Core Committee', onClick: handleCoreCommitteeClick },
-              { text: 'Vivitsu', onClick: handleVivitsuClick }
+              { text: "Past Events", onClick: handlePastEventsClick },
+              { text: "Core Committee", onClick: handleCoreCommitteeClick },
+              { text: "Vivitsu", onClick: handleVivitsuClick },
             ].map((item, index) => (
-              <div 
+              <div
                 key={index}
                 onClick={item.onClick}
                 className="circle-container w-40 h-40 md:w-60 md:h-60 lg:w-72 lg:h-72 mb-10 md:mb-0 cursor-pointer"
               >
                 <div className="glowing-border"></div>
-                <div className="circle-inner text-base md:text-xl lg:text-2xl">{item.text}</div>
+                <div className="circle-inner text-base md:text-xl lg:text-2xl">
+                  {item.text}
+                </div>
               </div>
             ))}
           </div>
@@ -264,9 +273,12 @@ const Home = () => {
         transition={{ duration: 0.8, ease: "easeOut" }}
         className="bg-transparent backdrop-blur-md text-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-700 max-w-xl mx-5  md:mx-auto my-10 md:my-16 text-center"
       >
-        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">FSW Annual Report</h2>
+        <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
+          FSW Annual Report
+        </h2>
         <p className="text-sm md:text-base text-gray-300 mb-4">
-          Stay updated with our latest achievements and initiatives. Click below to view the full report.
+          Stay updated with our latest achievements and initiatives. Click below
+          to view the full report.
         </p>
         <a
           href="https://www.griet.ac.in/2024/FSW%20Report%202023-2024.pdf"
@@ -283,9 +295,13 @@ const Home = () => {
       {/* Join Community Section - Responsive */}
       <EvervaultCard className="bg-white/10 p-2 rounded-2xl shadow-lg text-center max-w-3xl mx-auto my-10">
         <div className="flex flex-col items-center space-y-4 mx-5 p-6 md:p-10">
-          <h2 className="text-2xl md:text-3xl font-bold text-white">FSW OSC COMMUNITY</h2>
+          <h2 className="text-2xl md:text-3xl font-bold text-white">
+            FSW OSC COMMUNITY
+          </h2>
           <p className="text-sm md:text-base text-gray-300 text-center max-w-xl">
-            Join our growing community of tech enthusiasts and developers. Create projects using open source tools and contribute to real time open source projects.
+            Join our growing community of tech enthusiasts and developers.
+            Create projects using open source tools and contribute to real time
+            open source projects.
           </p>
           <button className="bg-blue-500 text-white font-semibold px-4 py-2 md:px-6 md:py-3 rounded-full shadow-md hover:bg-blue-600 transition hover:scale-105 active:scale-95">
             JOIN US NOW
