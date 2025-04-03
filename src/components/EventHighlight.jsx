@@ -3,7 +3,7 @@ import Web from "./Web";
 
 const events = [
   { date: "28-03-2024", title: "Foss-Fest", description: "We taught about free open source software to people and we made everyone familiar with github and git commands", image: "1.jpg" },
-  { date: "19,20-04-2024", title: "Vivitsu 2.0 - Hackathon", description: "Prior to the hackathon, 10 problem statements were uploaded to our website, and participants were requested to select one of them. Students were informed of the code of conduct at 10:00 a.m.The first round of the Hackathon's evaluation took place at 11:00 a.m. on April 28. We served lunch and dinner, and to keep the participants from getting bored throughout the night, we organised enjoyable games and 14 activities", image: "../public/1.jpg" },
+  { date: "19,20-04-2024", title: "Vivitsu 2.0 - Hackathon", description: "Prior to the hackathon, 10 problem statements were uploaded to our website, and participants were requested to select one of them. Students were informed of the code of conduct at 10:00 a.m.The first round of the Hackathon's evaluation took place at 11:00 a.m. on April 28. We served lunch and dinner, and to keep the participants from getting bored throughout the night, we organised enjoyable games and 14 activities", image: "1.jpg" },
   { date: "05-12-2023 ", title: "Cyber-Bloom", description: "Celebrating Irish culture with parades and festivities.", image: "cb.png" },
   { date: "28,29-03-2023", title: "VIVITSU 1.0- Hackathon ", description: "Celebrating Irish culture with parades and festivities.", image: "vi1.0.png" },
   { date: "17-11-2022 ", title: "Tech Bola 2.0", description: "Celebrating Irish culture with parades and festivities.", image: "tb2.0.png" },
