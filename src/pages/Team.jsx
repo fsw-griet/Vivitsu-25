@@ -64,7 +64,7 @@ const Team = () => {
       {
         title: "Database & Documentation Team",
         members: [
-          { name: "Srivalli Gandhi",designation: "Lead Content Writer", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743426484/IMG-20250215-WA0065_-_Srivalli_G_b8juad.jpg", linkedin: "https://www.linkedin.com/in/srivalli-grandhi-b44547301" },
+          { name: "Srivalli Grandhi",designation: "Lead Content Writer", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743426484/IMG-20250215-WA0065_-_Srivalli_G_b8juad.jpg", linkedin: "https://www.linkedin.com/in/srivalli-grandhi-b44547301" },
           { name: "Rusheeka Akinapelli",designation: "Content Writer", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_3000,h_2000,g_auto/v1743426484/IMG20241108151414_-_Rusheeka_dnoffi.jpg", linkedin: "https://www.linkedin.com/in/rusheeka-akinapelli-ba8bab32a/" },
           { name: "Divyani Nigam",designation: "Database Member", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_1700,h_1400,g_auto/v1743426466/IMG-20231118-WA0008_-_Divyani_varf8y.jpg", linkedin: "www.linkedin.com/in/divyani-nigam-49b8a9294" },
           { name: "Swetha Achyutuni",designation: "Database Member", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_250,h_300,g_auto/v1743426495/Photo_from_-_Swetha_Achyutuni._vvagqt.jpg", linkedin: "" },
