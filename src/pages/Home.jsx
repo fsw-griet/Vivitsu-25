@@ -242,10 +242,10 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Circle Section - Responsive */}
+      {/* Card Section - Responsive */}
       <div className="w-full px-4 py-12 md:py-20 flex justify-center items-center">
         <div className="w-full max-w-6xl">
-          <div className="flex flex-col md:flex-row justify-center items-center gap-6 md:gap-10 lg:gap-20">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12 lg:gap-16">
             {[
               { text: "Past Events", onClick: handlePastEventsClick },
               { text: "Core Committee", onClick: handleCoreCommitteeClick },
@@ -254,12 +254,14 @@ const Home = () => {
               <div
                 key={index}
                 onClick={item.onClick}
-                className="circle-container w-40 h-40 md:w-60 md:h-60 lg:w-72 lg:h-72 mb-10 md:mb-0 cursor-pointer"
+                className="bg-white/10 p-8 rounded-lg shadow-lg hover:bg-white/20 transition-all duration-300 cursor-pointer"
               >
-                <div className="glowing-border"></div>
-                <div className="circle-inner text-base md:text-xl lg:text-2xl">
+                <h3 className="text-2xl md:text-3xl font-bold text-blue-400 mb-6 text-center">
                   {item.text}
-                </div>
+                </h3>
+                <p className="text-gray-300 text-center text-lg">
+                  Click to explore more about {item.text.toLowerCase()}.
+                </p>
               </div>
             ))}
           </div>
