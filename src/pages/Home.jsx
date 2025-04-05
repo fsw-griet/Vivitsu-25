@@ -235,31 +235,65 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Annual Report Section - Responsive */}
+      {/* Annual Report Section - Responsive with Dropdown */}
       <motion.div
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         transition={{ duration: 0.8, ease: "easeOut" }}
-        className="bg-transparent backdrop-blur-md text-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-700 max-w-xl mx-5  md:mx-auto my-10 md:my-16 text-center"
+        className="bg-transparent backdrop-blur-md text-white p-6 md:p-8 rounded-xl shadow-lg border border-gray-700 max-w-xl mx-5 md:mx-auto my-10 md:my-16 text-center"
       >
         <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">
-          FSW Annual Report
+          FSW Annual Reports
         </h2>
         <p className="text-sm md:text-base text-gray-300 mb-4">
-          Stay updated with our latest achievements and initiatives. Click below
-          to view the full report.
+          Explore our achievements and initiatives through the years.
         </p>
-        <a
-          href="https://www.griet.ac.in/2024/FSW%20Report%202023-2024.pdf"
-          target="_blank"
-          rel="noopener noreferrer"
-          download="FSW_Annual_Report.pdf"
-          className="inline-flex items-center px-4 py-2 md:px-6 md:py-3 bg-blue-600 text-white font-bold text-base md:text-lg rounded-lg shadow-lg hover:bg-blue-700 transition duration-300"
-        >
-          <FaFilePdf className="mr-2 text-xl md:text-2xl" />
-          View Report
-        </a>
-      </motion.div>
+        
+        <div className="relative inline-block w-full max-w-xs">
+          <select
+            className="block appearance-none w-full bg-gray-800 border border-gray-700 text-white py-3 px-4 pr-8 rounded-lg leading-tight focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500 mb-4"
+            onChange={(e) => {
+              if (e.target.value) {
+                window.open(e.target.value, '_blank');
+              }
+            }}
+          >
+            <option value="">Select a year</option>
+            <option value="https://www.griet.ac.in/2024/FSW%20Report%202023-2024.pdf">
+              2023-2024
+            </option>
+            <option value="https://www.griet.ac.in/2023/FSW%20Report%202022-2023.pdf">
+              2022-2023
+            </option>
+            <option value="https://www.griet.ac.in/2022/FSW%20REPORT%202021-2022.pdf">
+              2021-2022
+            </option>
+            <option value="https://www.griet.ac.in/images/FSWReport%202020-21.pdf">
+              2020-2021
+            </option>
+            {/* Add more years as needed */}
+          </select>
+          <div className="pointer-events-none absolute inset-y-0 right-0 flex items-center px-2 text-gray-400">
+            <svg className="fill-current h-4 w-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20">
+              <path d="M9.293 12.95l.707.707L15.657 8l-1.414-1.414L10 10.828 5.757 6.586 4.343 8z"/>
+            </svg>
+          </div>
+        </div>
+
+  <p className="text-sm text-gray-400 mt-2">
+    Or download the latest report directly:
+  </p>
+  <a
+    href="https://www.griet.ac.in/2024/FSW%20Report%202023-2024.pdf"
+    target="_blank"
+    rel="noopener noreferrer"
+    download="FSW_Annual_Report_2023-2024.pdf"
+    className="inline-flex items-center px-4 py-2 md:px-6 md:py-3 bg-blue-600 text-white font-bold text-base md:text-lg rounded-lg shadow-lg hover:bg-blue-700 transition duration-300 mt-2"
+  >
+    <FaFilePdf className="mr-2 text-xl md:text-2xl" />
+    Download Latest Report
+  </a>
+</motion.div>
 
       {/* Join Community Section - Responsive */}
       <EvervaultCard className="bg-white/10 p-2 rounded-2xl shadow-lg text-center max-w-3xl mx-auto my-10">
