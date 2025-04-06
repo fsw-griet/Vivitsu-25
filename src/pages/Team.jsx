@@ -76,7 +76,7 @@ const Team = () => {
       {
         title: "Design ",
         members: [
-          { name: "Susanna Bhukya",designation: "Graphic Designer Lead", photo: "fsw_logo.png", linkedin: "https://linkedin.com/in/sarahconnor" },
+          { name: "Susanna Bhukya",designation: "Graphic Designer Lead", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_1000,h_1500,g_auto/v1743943555/IMG-20250403-WA0018_m4vz61.jpg", linkedin: "https://www.linkedin.com/in/susanna-john-a564a428a/" },
           { name: "Keerthi BogiReddy",designation: "Graphic Designer Co-Lead", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743426466/IMG_20250325_225005_-_Keerthi_Bogireddy_jgpxsw.jpg", linkedin: "https://www.linkedin.com/in/keerthi-bogireddy-9a00a2291/" },
           { name: "Anirudh Inturi",designation: "Graphic Designer", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/v1743426463/1734688689951_-_Anirudh_Inturi_fjfpdf.jpg", linkedin: "https://www.linkedin.com/in/anirudh-inturi-a043322a6/" },
           { name: "Almas Tamanna",designation: "Graphic Designer", photo: "https://res.cloudinary.com/dpa0sb1tm/image/upload/c_crop,w_2800,h_3000,g_auto/v1743778689/IMG_2967_-_Almas_Tamanna_-_Almas_Tamanna_jcyvlz.jpeg", linkedin: "http://linkedin.com/in/almas-tamanna-122a2a314" },
